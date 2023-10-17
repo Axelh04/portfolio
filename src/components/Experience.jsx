@@ -14,21 +14,21 @@ const experiences = [
     date: 'May 2023 - Aug-2023',
     location: 'Internship | Chicago, IL',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Nullam eget tincidunt ipsum.red',
-    imageUrl: './public/msipng.png', // Replace with your image URL
+    imageUrl: 'msipng.png', // Replace with your image URL
   },
   {
     companyName: 'Deputy Project Manager',
     date: 'Jan 2023 - May-2023',
     location: 'Mentorship | Tempe, AZ',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Nullam eget tincidunt ipsum.',
-    imageUrl: './public/nasapng.png', // Replace with your image URL
+    imageUrl: 'nasapng.png', // Replace with your image URL
   },
   {
     companyName: 'Internal Vice President',
     date: 'Sep 2022 - Present',
     location: 'Executive Board | Chicago, IL',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /> Nullam eget tincidunt ipsum.',
-    imageUrl: './public/shpe.png', // Replace with your image URL
+    imageUrl: 'shpe.png', // Replace with your image URL
   },
   // Add more experiences as needed
 ];

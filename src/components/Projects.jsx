@@ -34,7 +34,7 @@ const projectsData = [
     description: 'An interactive tool to animate the aerodynamics of a ball using a open source webbased IDE for teaching faciliation.',
     awards: '1st in Class Trajectory Calculations,<br />Top 20 National Rocketry Club  ',
     technologies: 'Python, VPython, Glowscript, Math',
-    imageUrl: 'src/assets/aero.png',
+    imageUrl: 'aero.png',
   },
   
   

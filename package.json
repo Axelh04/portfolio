@@ -1,8 +1,7 @@
 {
-  "homepage": "https://github.com/Axelh04/myportfolio.git",
   "name": "project-apple",
-  "private": true,
   "version": "0.0.0",
+  "homepage": "https://github.com/Axelh04/portfolio.git",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -86,7 +86,7 @@ const links = [
 
       </div>
         <video
-          src="main/gradient_background_loop.mp4"
+          src="aestheticb.mp4"
           alt="aesthetic"
           className="absolute inset-0 h-full -z-10 w-full object-cover object-right md:object-center"
           autoPlay

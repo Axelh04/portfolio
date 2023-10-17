@@ -1,0 +1,32 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Replace with your preferred Apple font */
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+/* Add more styles as needed */
+
+/* styles.css */
+
+/* Light Mode Styles */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+

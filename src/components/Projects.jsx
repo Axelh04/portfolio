@@ -4,29 +4,29 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
   
-  {
-    title: 'Project 1',
-    description: 'Description of Project 1...',
-    technologies: 'React, Tailwind CSS',
-    imageUrl: '/aero.png',
-  },
-  {
-    title: 'Automated STL<br />Braille Project',
-    date: 'July, 2023',
-    awards: 'In association with the Museum of Science and Industry Accessiblity Effort',
-    description: 'Created STL Braille Generator, improving accessibility for visually impaired, resulting in cost savings',
-    technologies: 'C,<br />C#,<br />Terminal,<br /> STL',
-    imageUrl: '/aero.png',
-  },
+  // {
+  //   title: 'Project 1',
+  //   description: 'Description of Project 1...',
+  //   technologies: 'React, Tailwind CSS',
+  //   imageUrl: './public/aero.png',
+  // },
+  // {
+  //   title: 'Automated STL<br />Braille Project',
+  //   date: 'July, 2023',
+  //   awards: 'In association with the Museum of Science and Industry Accessiblity Effort',
+  //   description: 'Created STL Braille Generator, improving accessibility for visually impaired, resulting in cost savings',
+  //   technologies: 'C,<br />C#,<br />Terminal,<br /> STL',
+  //   imageUrl: './public/aero.png',
+  // },
 
-  {
-    title: 'SweetDeals<br />Mobile App',
-    date: 'Oct, 2022',
-    description: 'A mobile marketplace for trick-or-treaters to trade candy through a social and secure platform',
-    awards: 'MLH Hackathon Project,<br /> IOS/Android Compatiblity',
-    technologies: 'Flutter, Dartpad, Heroku, Firebase',
-    imageUrl: '/aero.png',
-  },
+  // {
+  //   title: 'SweetDeals<br />Mobile App',
+  //   date: 'Oct, 2022',
+  //   description: 'A mobile marketplace for trick-or-treaters to trade candy through a social and secure platform',
+  //   awards: 'MLH Hackathon Project,<br /> IOS/Android Compatiblity',
+  //   technologies: 'Flutter, Dartpad, Heroku, Firebase',
+  //   imageUrl: './public/aero.png',
+  // },
 
   {
     title:'Computational<br />Mechanics',
@@ -34,7 +34,7 @@ const projectsData = [
     description: 'An interactive tool to animate the aerodynamics of a ball using a open source webbased IDE for teaching faciliation.',
     awards: '1st in Class Trajectory Calculations,<br />Top 20 National Rocketry Club  ',
     technologies: 'Python, VPython, Glowscript, Math',
-    imageUrl: '/aero.png',
+    imageUrl: './public/aero.png',
   },
   
   

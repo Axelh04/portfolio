@@ -14,7 +14,7 @@ export default function Contact() {
     <div className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden  sm:py-32 md:mt-40 md:mb-10">
 
         <video
-          src="/Gradient_Background_Loop.mp4"
+          src="Gradient_Background_Loop.mp4"
           alt="aesthetic"
           className="absolute inset-0 h-full -z-10 w-full object-cover object-right md:object-center"
           autoPlay

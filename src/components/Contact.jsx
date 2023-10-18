@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import React, { useRef, useState} from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 import { Container } from 'postcss'
+import emailjs from '@emailjs/browser'
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -10,8 +12,22 @@ function classNames(...classes) {
 export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_cppd4o9', 'template_j0a90jx', form.current, 'pUBdVrQsoJ-yOZWVm')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
-    <div className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden  sm:py-32 md:mt-40 md:mb-10">
+    <div className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden  sm:py-32 mt-0 md:mb-10">
 
         <video
           src="aestheticb.mp4"
@@ -25,7 +41,7 @@ export default function Contact() {
       <div className="mx-auto max-w-2xl text-center ">
         <h1 className="text-5xl font-bold tracking-tight text-white ">Contact Me</h1>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form ref={form} onSubmit={sendEmail} className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
@@ -34,7 +50,7 @@ export default function Contact() {
             <div className="mt-2.5 relative">
             <input
                 type="text"
-                name="first-name"
+                name="user_first-name"
                 id="first-name"
                 autoComplete="given-name"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -50,7 +66,7 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="last-name"
+                name="user_last-name"
                 id="last-name"
                 autoComplete="family-name"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -64,7 +80,7 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
+                name="user_company"
                 id="company"
                 autoComplete="organization"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -78,7 +94,7 @@ export default function Contact() {
             <div className="mt-2.5">
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 id="email"
                 autoComplete="email"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -97,7 +113,7 @@ export default function Contact() {
                 <select
                   id="country"
                   name="country"
-                  className="h-full rounded-3xl border-0 bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                  className="h-full rounded-3xl border-0 bg-none py-0 pl-4 pr-9 text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 >
                   <option>US</option>
                   <option>CA</option>
@@ -107,10 +123,10 @@ export default function Contact() {
               </div>
               <input
                 type="tel"
-                name="phone-number"
+                name="user_number"
                 id="phone-number"
                 autoComplete="tel"
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 pl-20 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-3xl border-0 px-3.5 py-2 pl-20 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -123,12 +139,12 @@ export default function Contact() {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 defaultValue={''}
               />
             </div>
           </div>
-          <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
+          {/* <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
             <div className="flex h-6 items-center">
               <Switch
                 checked={agreed}
@@ -155,12 +171,13 @@ export default function Contact() {
               </a>
               .
             </Switch.Label>
-          </Switch.Group>
+          </Switch.Group> */}
         </div>
         <div className="mt-10">
           <button
             type="submit"
-            className="block w-full rounded-3xl bg-indigo-300 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+             value="Send"
+            className="block w-full rounded-3xl bg-purple-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-purple-500 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Let's talk
           </button>

@@ -3,10 +3,10 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const links = [
-    { name: 'Resume', href: '#' },
+    { name: 'Resume', href: 'https://drive.google.com/file/d/1QefmsFY4zvy6LjUxo3gNa4zj-TxVhYf1/view?usp=sharing' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/axel-hernandez2026' },
-    { name: 'Github', href: '#' },
-    { name: 'Medium', href: '#' },
+    { name: 'Github', href: 'https://github.com/Axelh04' },
+    { name: 'Medium', href: 'https://medium.com/@axelwork2004' },
   ]
   const stats = [
     { name: 'Java', value: 'Languages' },
@@ -85,29 +85,16 @@ const links = [
         </motion.p>
 
       </div>
+    
         <video
           src="aestheticb.mp4"
           alt="aesthetic"
-          className="absolute inset-0 h-full -z-10 w-full object-cover object-right md:object-center"
+          className="absolute inset-0 h-full blur-none -z-10 w-full object-cover object-right md:object-center"
           autoPlay
           loop
           muted
         />
-
-          <div className="mt-10 md:flex ml-20 lg:float-left md:hidden">
-            <div className="md:w-2/3">
-              <motion.img
-                ref={ref}
-                initial="hidden"
-                animate={controls}
-                exit="hidden" // Use the same exit variant as initial
-                variants={fadeInVariants}
-                src="/memoji.png" // Replace with your image URL
-                alt="Your Image"
-                className="h-auto w-full object-cover"
-              />
-            </div>
-            </div>
+      
         
         <div className="mx-auto max-w-7xl px-6 lg:px-8 lg:ml-200  float-center mt-0 ">
         

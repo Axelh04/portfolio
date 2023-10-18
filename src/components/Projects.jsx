@@ -43,8 +43,11 @@ const projectsData = [
 const Projects = () => {
   return (
     <>
-    <motion.h1 className="text-5xl font-bold text-color text-center mt-40">Portfolio</motion.h1>
-    <div className="relative overflow-hidden md:mt-20 md:mb-20 ltr">
+      <div id="portfolio" className='h-10'>
+
+      </div>
+    <motion.h1  className="text-5xl font-bold text-color text-center mt-20 mb-32">Portfolio</motion.h1>
+    <div className="relative overflow-hidden md:mt-20 ltr">
 
 
        
@@ -54,7 +57,7 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-2/3 mr-20 snap-center snap-always mb-20"
+          className="inline-block w-6/12 mr-20 snap-center snap-always mb-80"
             >
           
           {/* <div className="bg-gray-100 text-black md:py-0 md:w-full md:mx-2 rounded-3xl shadow-inner">
@@ -97,32 +100,55 @@ const Projects = () => {
             <p className="text-3xl mx-auto w-1/2 font-bold mt-2">{project.technologies}</p>
            
           </div> */}
-
-          <div className=" bg-gray-100 float-right -mx-2 w-2/3 rounded-3xl py-10 shadow-inner whitespace-normal ">
-          <p className="text-3xl font-bold ">{project.date}</p>
+          <div className='w-3/4 mx-auto'>
+          <div className=" bg-gray-100 float-right  w-1/2 rounded-3xl py-5 shadow-inner whitespace-normal ">
+          <p className="text-2xl font-bold ">{project.date}</p>
           </div>
 
-          <div className=" relative backdrop-blur-md overflow-hidden w-1/3  rounded-3xl py-4  ">    
-          <h3 className=" text-4xl font-bold text-left text-purple-500 mx-auto" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
-          </div>
 
+          <div className=" relative  overflow-hidden    ">    
+          <h3 className=" text-2xl font-bold text-left text-purple-500 mx-auto" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
+          </div>
+          </div>
           <div className=" w-full">
             <img
                   src={project.imageUrl}
-                  className='w-full'
+                  className='w-full '
               />    
           </div>
-          <div className=" bg-gray-100 text-black md:py-10 w-full mx-auto px-5 rounded-3xl mb-4 shadow-inner whitespace-normal">
-            <p className="text-3xl font-bold">{project.description}</p> 
+          <div className=" bg-gray-100 text-black md:py-5 w-full mx-auto px-5 rounded-3xl mb-4 shadow-inner whitespace-normal">
+            <p className="text-2xl font-bold">{project.description}</p> 
           </div>
           
           <div className="bg-gray-100 text-black md:py-5 md:w-1/2 float-right rounded-3xl shadow-inner whitespace-normal -mx-2">
-            <p className="text-3xl mx-auto w-1/2 font-bold" dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
+            <p className="text-2xl mx-auto w-1/2 font-bold" dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
           </div>
 
           <div className=" bg-gray-100 text-black py-5 md:w-1/2 rounded-3xl shadow-inner whitespace-normal -mx-2 ">
-         <p className="text-3xl mx-auto w-3/4 font-bold " dangerouslySetInnerHTML = {{__html:project.awards}}></p>
+         <p className="text-2xl mx-auto w-3/4 font-bold " dangerouslySetInnerHTML = {{__html:project.awards}}></p>
           </div>
+
+          <div className='mt-4 mx-auto w-3/12'>
+          <motion.div 
+           whileHover={{ y:-10}}
+          className=' w-5/12 float-right'>
+          <a            
+          href="https://glowscript.org/#/user/ahernandez53/folder/MyPrograms/program/website2" target="_blank" >
+            <img src="export.png" className="w-full" alt="Export" />
+            </a>
+            </motion.div>
+          <motion.div 
+          whileHover={{ y:-10}}
+          className=" w-5/12 ">
+        <a href="https://github.com/Axelh04/brailleSTL_generator" target="_blank" >
+        <img src="GitHub.png" className="w-full " alt="GitHub" />
+        </a>
+        </motion.div>
+
+        
+              </div>
+
+
           
 
 

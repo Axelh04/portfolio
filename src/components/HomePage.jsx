@@ -50,9 +50,9 @@ const HomePage = () => {
         initial={{ x: 0, y: -100, opacity: 0 }}
         animate={{ x: 0, y: 20, opacity: 1 }}
         transition={{ duration: 2 }}
-        className={`whitespace-nowrap md:mt-40 md:mx-auto md:my-10 text-9xl font-semibold text-center`}>
+        className={`whitespace-nowrap md:mt-40 md:mx-auto md:my-10 sm:text-9xl md:text-9xl lg:text-9xl font-semibold text-center`}>
         Hi, I am{' '}
-        <motion.p className='text-11xl' style={{ ...currentFontStyle,
+        <motion.p className='sm:text-9xl md:text-9xl lg:text-9xl' style={{ ...currentFontStyle,
           fontStyle: currentFontStyle.fontStyle,
           fontWeight: currentFontStyle.fontWeight, 
           display: 'inline' }}>Axel</motion.p>...

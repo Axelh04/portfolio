@@ -66,8 +66,9 @@ const links = [
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-10, opacity: 1 }}
       transition={{ duration: 2 }}
-      className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden sm:py-32 md:mt-40" >
-      <div id = "aboutme" className='h-24'>
+      id = "aboutme"
+      className="relative ml-5 mr-5 rounded-3xl border overflow-hidden py-32 mt-40" >
+      <div className='h-24'>
       <motion.p 
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-25, opacity: 1 }}

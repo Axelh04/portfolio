@@ -10,31 +10,37 @@ const projectsData = [
   //   technologies: 'React, Tailwind CSS',
   //   imageUrl: './public/aero.png',
   // },
-  // {
-  //   title: 'Automated STL<br />Braille Project',
-  //   date: 'July, 2023',
-  //   awards: 'In association with the Museum of Science and Industry Accessiblity Effort',
-  //   description: 'Created STL Braille Generator, improving accessibility for visually impaired, resulting in cost savings',
-  //   technologies: 'C,<br />C#,<br />Terminal,<br /> STL',
-  //   imageUrl: './public/aero.png',
-  // },
+  {
+    title: 'Automated STL<br />Braille Project',
+    date: 'July, 2023',
+    awards: 'In association with the Museum of Science and Industry Accessiblity Effort',
+    description: 'Converts user-input text into a 3D .stl file, enabling a 3D printer to produce Braille representations, with the goal of aiding visually impaired guests',
+    technologies: 'C,<br />C#,<br />Terminal,<br /> STL',
+    imageUrl: 'braille.png',
+    github: 'https://github.com/Axelh04/brailleSTL_generator',
+  },
 
-  // {
-  //   title: 'SweetDeals<br />Mobile App',
-  //   date: 'Oct, 2022',
-  //   description: 'A mobile marketplace for trick-or-treaters to trade candy through a social and secure platform',
-  //   awards: 'MLH Hackathon Project,<br /> IOS/Android Compatiblity',
-  //   technologies: 'Flutter, Dartpad, Heroku, Firebase',
-  //   imageUrl: './public/aero.png',
-  // },
+  {
+    title: 'SweetDeals<br />Mobile App',
+    date: 'Oct, 2022',
+    description: 'Mobile trick or treating marketplace with Flutter, Heroku using Dart and market compatible with IOS/Android',
+    awards: 'MLH Hackathon Project,<br /> IOS/Android Compatiblity',
+    technologies: 'Flutter, Dartpad, Heroku',
+    imageUrl: 'sweet1.png',
+    live: 'https://devpost.com/software/test-ida1un',
+    github: 'https://github.com/Dodhon/DemonHacks2022/tree/Frontend'
+
+  },
 
   {
     title:'Computational<br />Mechanics',
     date: 'Aug, 2022',
     description: 'An interactive tool to animate the aerodynamics of a ball using a open source webbased IDE for teaching faciliation.',
-    awards: '1st in Class Trajectory Calculations,<br />Top 20 National Rocketry Club  ',
+    awards: '1st in Class Trajectory Calculations & Top 20 National Rocketry Club  ',
     technologies: 'Python, VPython, Glowscript, Math',
     imageUrl: 'aero.png',
+    github: '',
+    live: 'https://glowscript.org/#/user/ahernandez53/folder/MyPrograms/program/website2'
   },
   
   
@@ -57,7 +63,7 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-6/12 mr-20 snap-center snap-always mb-80"
+          className="inline-block w-6/12 mr-32 snap-center snap-always mb-80 "
             >
           
           {/* <div className="bg-gray-100 text-black md:py-0 md:w-full md:mx-2 rounded-3xl shadow-inner">
@@ -100,20 +106,20 @@ const Projects = () => {
             <p className="text-3xl mx-auto w-1/2 font-bold mt-2">{project.technologies}</p>
            
           </div> */}
-          <div className='w-3/4 mx-auto'>
+          <div className='w-3/4 mx-auto '>
           <div className=" bg-gray-100 float-right  w-1/2 rounded-3xl py-5 shadow-inner whitespace-normal ">
           <p className="text-2xl font-bold ">{project.date}</p>
           </div>
 
 
           <div className=" relative  overflow-hidden    ">    
-          <h3 className=" text-2xl font-bold text-left text-purple-500 mx-auto" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
+          <h3 className=" text-3xl font-bold text-left text-purple-500 mx-auto" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
           </div>
           </div>
           <div className=" w-full">
             <img
                   src={project.imageUrl}
-                  className='w-full '
+                  className='w-full mb-4 mt-4'
               />    
           </div>
           <div className=" bg-gray-100 text-black md:py-5 w-full mx-auto px-5 rounded-3xl mb-4 shadow-inner whitespace-normal">
@@ -133,14 +139,14 @@ const Projects = () => {
            whileHover={{ y:-10}}
           className=' w-5/12 float-right'>
           <a            
-          href="https://glowscript.org/#/user/ahernandez53/folder/MyPrograms/program/website2" target="_blank" >
+          href={project.live} target="_blank" >
             <img src="export.png" className="w-full" alt="Export" />
             </a>
             </motion.div>
           <motion.div 
           whileHover={{ y:-10}}
           className=" w-5/12 ">
-        <a href="https://github.com/Axelh04/brailleSTL_generator" target="_blank" >
+        <a href={project.github} target="_blank" >
         <img src="GitHub.png" className="w-full " alt="GitHub" />
         </a>
         </motion.div>

@@ -3,6 +3,8 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 import { Container } from 'postcss'
 import emailjs from '@emailjs/browser'
+import { motion, useAnimation } from 'framer-motion';
+
 
 
 function classNames(...classes) {
@@ -10,7 +12,17 @@ function classNames(...classes) {
 }
 
 export default function Contact() {
-  const [agreed, setAgreed] = useState(false)
+  // const [agreed, setAgreed] = useState(false)
+  const [confirmationMessage, setConfirmationMessage] = useState('');
+  const [formData, setFormData] = useState({
+    user_first_name: '',
+    user_last_name: '',
+    user_company: '',
+    user_email: '',
+    user_number: '',
+    user_country: 'US', // Initialize with a default country
+    message: '',
+  });
 
   const form = useRef();
 
@@ -19,15 +31,38 @@ export default function Contact() {
 
     emailjs.sendForm('service_cppd4o9', 'template_j0a90jx', form.current, 'pUBdVrQsoJ-yOZWVm')
       .then((result) => {
+
+
           console.log(result.text);
           console.log("message sent")
-      }, (error) => {
+
+          // Show confirmation message
+        setConfirmationMessage('Thank you for your message! I will reach out ASAP.');
+
+        // Reset the form using its reset method
+        form.current.reset();
+
+        // Reset the formData state
+        setFormData({
+          user_first_name: '',
+          user_last_name: '',
+          user_company: '',
+          user_email: '',
+          user_number: '',
+          user_country: 'US', // Reset the country to the default
+          message: '',
+        });
+
+
+      }, 
+      
+      (error) => {
           console.log(error.text);
       });
   };
 
   return (
-    <div className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden  sm:py-32 mt-0 md:mb-10">
+    <div id='contact' className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden  sm:py-32 mt-0 md:mb-10">
 
         <video
           src="aestheticb.mp4"
@@ -37,7 +72,7 @@ export default function Contact() {
           loop
           muted
         />
-    <section className=" backdrop-blur-xl rounded-3xl mx-auto w-max px-10 py-10">
+    <section className=" backdrop-blur-3xl rounded-3xl mx-auto w-max px-10 py-10">
       <div className="mx-auto max-w-2xl text-center ">
         <h1 className="text-5xl font-bold tracking-tight text-white ">Contact Me</h1>
       </div>
@@ -51,7 +86,7 @@ export default function Contact() {
             <input
                 type="text"
                 name="user_first-name"
-                id="first-name"
+                id="user_first-name"
                 autoComplete="given-name"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -67,7 +102,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="user_last-name"
-                id="last-name"
+                id="user_last-name"
                 autoComplete="family-name"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -81,7 +116,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="user_company"
-                id="company"
+                id="user_company"
                 autoComplete="organization"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -95,7 +130,7 @@ export default function Contact() {
               <input
                 type="email"
                 name="user_email"
-                id="email"
+                id="user_email"
                 autoComplete="email"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -111,20 +146,24 @@ export default function Contact() {
                   Country
                 </label>
                 <select
-                  id="country"
-                  name="country"
-                  className="h-full rounded-3xl border-0 bg-none py-0 pl-4 pr-9 text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-                >
-                  <option>US</option>
-                  <option>CA</option>
-                  <option>EU</option>
-                </select>
+  id="country"
+  name="user_country"
+  value={formData.user_country}
+  onChange={(e) => {
+    setFormData({ ...formData, user_country: e.target.value });
+  }}
+  className="h-full rounded-3xl border-0 bg-none py-0 pl-4 pr-9 text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+>
+  <option>US</option>
+  <option>CA</option>
+  <option>EU</option>
+</select>
                
               </div>
               <input
                 type="tel"
                 name="user_number"
-                id="phone-number"
+                id="user_number"
                 autoComplete="tel"
                 className="block w-full rounded-3xl border-0 px-3.5 py-2 pl-20 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -174,16 +213,22 @@ export default function Contact() {
           </Switch.Group> */}
         </div>
         <div className="mt-10">
-          <button
+          <motion.button
             type="submit"
              value="Send"
             className="block w-full rounded-3xl bg-purple-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-purple-500 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
+       
             Let's talk
-          </button>
+         
+          </motion.button>
         </div>
       </form>
       </section>
+
+      {confirmationMessage && (
+        <div className=" rounded-3xl w-1/3 mx-auto text-3xl backdrop-blur-3xl p-5 mt-4 text-green-300 font-base">{confirmationMessage}</div>
+      )}
     </div>
   )
 }

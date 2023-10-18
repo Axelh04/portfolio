@@ -67,7 +67,7 @@ const links = [
       animate={{ x: 0, y:-10, opacity: 1 }}
       transition={{ duration: 2 }}
       id = "aboutme"
-      className="relative ml-5 mr-5 rounded-3xl border overflow-hidden py-32 mt-40" >
+      className="relative ml-5 mr-5 rounded-3xl overflow-hidden py-32 mt-40" >
       <div className='h-24'>
       <motion.p 
       initial={{ x: 0, y:100, opacity: 0 }}
@@ -90,7 +90,7 @@ const links = [
         <video
           src="aestheticb.mp4"
           alt="aesthetic"
-          className="absolute inset-0 h-full blur-none -z-10 w-full object-cover object-right md:object-center"
+          className="absolute inset-0 h-full -z-10 w-full object-cover object-right md:object-center"
           autoPlay
           loop
           muted

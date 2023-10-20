@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  top: 0;
+  top: auto;
   padding: 10px 0;
   width: 100%; /* Full width */
   z-index: 100; /* Ensure it's above other content */
@@ -22,12 +22,7 @@
   border-radius: 25px;
   transition: top 2s ease; /* Add a smooth transition for top property */
   position:absolute;
-}
-
-/* Style for sticky navbar */
-.navbar.sticky {
-  top: 0; /* Stick to the top */
-  position: fixed;
+  margin-top: 200px;
 }
 
 ul {

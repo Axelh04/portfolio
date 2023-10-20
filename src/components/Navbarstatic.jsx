@@ -5,35 +5,47 @@ import styles from './Navbarstatic.module.css';
 
 const Navbarstatic = () => {
 
+  
+
   return (
-    <div className={styles['navbar-container']}>
+    <div className=' relative w-full flex justify-center'>
       <motion.nav
-      initial={{ opacity: 0, y: -10 }} // Initial hidden state
-      animate={{ opacity: 1, y: 0 }} // Animate with controls
-      transition={{ duration: 2 }} // Adjust the transition duration
+      initial={{scale: 1.2,x:0, width: 55 }} // Initial hidden state
+      animate={{scale: 1, x:0, width:480 }} // Animate with controls
+      transition={{ duration: 2.5, delay: .5 }} // Adjust the transition duration
+     
+      className='absolute rounded-3xl mx-auto overflow-hidden z-10 md:mt-[400px] bg-gray-200 shadow-inner'
       >
-        <ul>
-          <li>
-            <Link to="aboutme" smooth={true} duration={500}>
-              About Me
+        <motion.ul 
+       
+        className='font-medium w-[480px] cursor-pointer overflow-hidden mx-auto py-2 rounded-3xl'>
+
+        <li className='block -mr-2 border'>
+            <Link className='text-3xl' to="experience" smooth={true} duration={1000}>
+              🚀
             </Link>
           </li>
-          <li>
-            <Link to="experience" smooth={true} duration={500}>
+        <li className='block mr-1 border'>
+            <Link to="aboutme" className='align-middle text-xl' smooth={true} duration={1000}>
+              About
+            </Link>
+          </li>
+          <li className='block mr-1  border'>
+            <Link to="experience" className='align-middle text-xl' smooth={true} duration={1000}>
               Experience
             </Link>
           </li>
-          <li>
-            <Link to="portfolio" smooth={true} duration={500}>
+          <li className='block mr-2  border'>
+            <Link to="portfolio" className='align-middle text-xl' smooth={true} duration={1000}>
               Portfolio
             </Link>
           </li>
-          <li>
-            <Link to="contact" smooth={true} duration={500}>
+          <li className='block mr-10  border'>
+            <Link to="contact" className='align-middle text-xl' smooth={true} duration={1000}>
               Contact
             </Link>
           </li>
-        </ul>
+        </motion.ul>
       </motion.nav>
     </div>
   );

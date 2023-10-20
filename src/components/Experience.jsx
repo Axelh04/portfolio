@@ -35,16 +35,16 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div  className="mt-0 mb-0">
+    <div  className=" relative mt-0 mb-0 z-50">
       <div id="experience" className='h-10'>
 
       </div>
-      <motion.h1 className="text-5xl font-bold text-center mt-20 mb-32">Experience</motion.h1>
+      <motion.h1 className="text-5xl font-bold text-center mt-20 mb-32 text-black ">Experience</motion.h1>
       <div className="flex flex-wrap justify-center">
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className="bg-gray-100  shadow-inner overflow-hidden w-11/12 py-4 mb-4 "
+            className=" backdrop-blur-xl backdrop-brightness-[.96] shadow-inner overflow-hidden w-3/4 py-4 mb-4 "
             style={{ borderRadius: '50px' }}
           >
             <div className="md:flex">

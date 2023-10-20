@@ -65,14 +65,14 @@ export default function Contact() {
     <div id='contact' className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden  sm:py-32 mt-0 md:mb-10">
 
         <video
-          src="aestheticb.mp4"
+          src="rocket.mp4"
           alt="aesthetic"
           className="absolute inset-0 h-full -z-10 w-full object-cover object-right md:object-center"
           autoPlay
-          loop
           muted
+          loop
         />
-    <section className=" backdrop-blur-3xl rounded-3xl mx-auto w-max px-10 py-10">
+    <section className=" backdrop-blur-md backdrop-brightness-[.5] rounded-3xl mx-auto w-max px-10 py-10">
       <div className="mx-auto max-w-2xl text-center ">
         <h1 className="text-5xl font-bold tracking-tight text-white ">Contact Me</h1>
       </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                 name="user_first-name"
                 id="user_first-name"
                 autoComplete="given-name"
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
                 />
             </div>
 
@@ -104,7 +104,7 @@ export default function Contact() {
                 name="user_last-name"
                 id="user_last-name"
                 autoComplete="family-name"
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Contact() {
                 name="user_company"
                 id="user_company"
                 autoComplete="organization"
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                 name="user_email"
                 id="user_email"
                 autoComplete="email"
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function Contact() {
   onChange={(e) => {
     setFormData({ ...formData, user_country: e.target.value });
   }}
-  className="h-full rounded-3xl border-0 bg-none py-0 pl-4 pr-9 text-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+  className="h-full border-0 bg-white py-0 pl-4 pr-9 text-black ring-black ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm"
 >
   <option>US</option>
   <option>CA</option>
@@ -165,7 +165,7 @@ export default function Contact() {
                 name="user_number"
                 id="user_number"
                 autoComplete="tel"
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 pl-20 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 pl-20 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function Contact() {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full rounded-3xl border-0 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
                 defaultValue={''}
               />
             </div>
@@ -214,21 +214,25 @@ export default function Contact() {
         </div>
         <div className="mt-10">
           <motion.button
+            whileHover={{scale:1.05}}
+            whileTap={{scale:.95}}
             type="submit"
              value="Send"
-            className="block w-full rounded-3xl bg-purple-700 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-purple-500 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full shadow-3xl bg-orange-500 text-white rounded-3xl px-3.5 py-2.5 text-center text-sm font-semibold  shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:focus:ring-orange-500"
           >
        
             Let's talk
          
           </motion.button>
         </div>
+
+        {confirmationMessage && (
+        <div className=" rounded-3xl w-full mx-auto text-3xl p-5 mt-4 text-orange-300 font-base">{confirmationMessage}</div>
+      )}
       </form>
       </section>
 
-      {confirmationMessage && (
-        <div className=" rounded-3xl w-1/3 mx-auto text-3xl backdrop-blur-3xl p-5 mt-4 text-green-300 font-base">{confirmationMessage}</div>
-      )}
+    
     </div>
   )
 }

@@ -9,6 +9,9 @@ export default {
     "./src/components/Navbarstatic.jsx",
     "./src/components/Projects.jsx",
     "./src/components/Contact.jsx",
+    "./src/components/Landingvideo.jsx",
+    "./src/components/Landingtext.jsx",
+
 
 
 

@@ -10,7 +10,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Adjust this threshold to control when the Navbar becomes sticky
-      const scrollThreshold = 500; // Change this value as needed
+      const scrollThreshold = 1000; // Change this value as needed
 
       if (window.scrollY > scrollThreshold) {
         setIsSticky(true);
@@ -31,7 +31,7 @@ const Navbar = () => {
     controls.start({ opacity: isSticky ? 1 : 0, y: isSticky ? -2 : -10, scale: isSticky ? 1 : 1 });
   }, [isSticky, controls]);
 
-  const navbarClass = isSticky ? `${styles.navbar} ${styles.sticky}` : styles.navbar;
+  const navbarClass = isSticky ? `${styles.navbar} ${styles.sticky}` : 'hidden';
 
   return (
     <div className={styles['navbar-container']}>
@@ -43,22 +43,22 @@ const Navbar = () => {
       >
         <ul>
           <li>
-            <Link to="aboutme" smooth={true} duration={500}>
+            <Link to="aboutme" smooth={true} duration={1000}>
               About Me
             </Link>
           </li>
           <li>
-            <Link to="experience" smooth={true} duration={500}>
+            <Link to="experience" smooth={true} duration={1000}>
               Experience
             </Link>
           </li>
           <li>
-            <Link to="portfolio" smooth={true} duration={500}>
+            <Link to="portfolio" smooth={true} duration={1000}>
               Portfolio
             </Link>
           </li>
           <li>
-            <Link to="contact" smooth={true} duration={500}>
+            <Link to="contact" smooth={true} duration={1000}>
               Contact
             </Link>
           </li>

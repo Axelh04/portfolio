@@ -11,21 +11,21 @@ const projectsData = [
   //   imageUrl: './public/aero.png',
   // },
   {
-    title: 'Automated STL<br />Braille Project',
+    title: '3D Braille Generator ',
     date: 'July, 2023',
-    awards: 'In association with the Museum of Science and Industry Accessiblity Effort',
+    awards: 'In association with the MSI Accessiblity Effort',
     description: 'Converts user-input text into a 3D .stl file, enabling a 3D printer to produce Braille representations, with the goal of aiding visually impaired guests',
-    technologies: 'C,<br />C#,<br />Terminal,<br /> STL',
+    technologies: 'C,<br />C#,<br />Terminal,<br />STL',
     imageUrl: 'braille.png',
     github: 'https://github.com/Axelh04/brailleSTL_generator',
   },
 
   {
-    title: 'SweetDeals<br />Mobile App',
+    title: 'SweetDeals',
     date: 'Oct, 2022',
-    description: 'Mobile trick or treating marketplace with Flutter, Heroku using Dart and market compatible with IOS/Android',
-    awards: 'MLH Hackathon Project,<br /> IOS/Android Compatiblity',
-    technologies: 'Flutter, Dartpad, Heroku',
+    description: 'Mobile trick or treating marketplace built with Flutter, and hosted with Heroku. Market compatible with IOS/Android',
+    awards: 'MLH DemonHacks Hackathon Project',
+    technologies: 'Flutter, Dart, Heroku, Firebase',
     imageUrl: 'sweet1.png',
     live: 'https://devpost.com/software/test-ida1un',
     github: 'https://github.com/Dodhon/DemonHacks2022/tree/Frontend'
@@ -33,10 +33,10 @@ const projectsData = [
   },
 
   {
-    title:'Computational<br />Mechanics',
+    title:'Computational Mechanics',
     date: 'Aug, 2022',
     description: 'An interactive tool to animate the aerodynamics of a ball using a open source webbased IDE for teaching faciliation.',
-    awards: '1st in Class Trajectory Calculations & Top 20 National Rocketry Club  ',
+    awards: '1st place in Class Trajectory Competition',
     technologies: 'Python, VPython, Glowscript, Math',
     imageUrl: 'aero.png',
     github: '',
@@ -52,7 +52,7 @@ const Projects = () => {
       <div id="portfolio" className='h-10'>
 
       </div>
-    <motion.h1  className="text-5xl font-bold text-color text-center mt-20 mb-32">Portfolio</motion.h1>
+    <motion.h1  className="text-5xl relative font-bold text-color text-center mt-20 mb-32">Portfolio</motion.h1>
     <div className="relative overflow-hidden md:mt-20 ltr">
 
 
@@ -63,81 +63,62 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-6/12 mr-32 snap-center snap-always mb-80 "
+          className="inline-block w-3/4 mr-36 snap-center snap-always mb-80 "
             >
+
+
+
+
+          <div className='w-7/12 float-left -mx-4'>
           
-          {/* <div className="bg-gray-100 text-black md:py-0 md:w-full md:mx-2 rounded-3xl shadow-inner">
-            <img
-                  src={project.imageUrl}
-                  className='w-1/3 float-right'
 
-              />
 
-          
+          <div className=" bg-gray-100 w-full rounded-3xl h-20 py-5 mb-4 shadow-inner whitespace-normal  ">    
+          <h3 className=" text-3xl font-bold  mx-auto bg-gradient-to-r from-blue-600 via-purple-500 to-white-900 inline-block text-transparent bg-clip-text " dangerouslySetInnerHTML = {{__html:project.title}}></h3>
           </div>
-          
-          <div className=" bg-gray-100 text-black md:py-10 w-8/12 -mx-2 px-5 rounded-3xl mb-2 shadow-inner whitespace-normal">
-            <p className="text-3xl font-bold mt-2">{project.description}</p> 
-          </div>
-
-          <div className=" bg-gray-100 float-left -mx-2 w-1/3 rounded-3xl py-10 shadow-inner whitespace-normal ">
-          <p className="text-3xl font-bold ">{project.date}</p>
-          </div>
-
-          <div className=" bg-gray-100 text-black md:h-80 md:w-1/3 md:-mx-2 rounded-3xl float-right shadow-inner whitespace-normal">
-         <p className="text-3xl mx-auto w-3/4 font-bold mt-2" dangerouslySetInnerHTML = {{__html:project.awards}}></p>
-          </div>
-      
-          <div className=" relative backdrop-blur-md overflow-hidden w-1/3 mx-auto  rounded-3xl py-4 border ">
-          
-                    <h3 className=" text-4xl font-bold text-left text-purple-500 mx-auto" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
-
-        </div>
-      
         
-
+      
+    
           
-        <div className="bg-gray-100 text-black md:py-20 md:w-1/3 md:-mx-2 rounded-3xl float-left mt-2 shadow-inner whitespace-normal">
-         <p className="text-2xl mt-2">{project.des}</p>
-          </div>
-
-
-          <div className="bg-gray-100 text-black md:py-5 md:w-1/3 md:mx-auto rounded-3xl mt-2 shadow-inner whitespace-normal">
-            <p className="text-3xl mx-auto w-1/2 font-bold mt-2">{project.technologies}</p>
-           
-          </div> */}
-          <div className='w-3/4 mx-auto '>
-          <div className=" bg-gray-100 float-right  w-1/2 rounded-3xl py-5 shadow-inner whitespace-normal ">
-          <p className="text-2xl font-bold ">{project.date}</p>
-          </div>
-
-
-          <div className=" relative  overflow-hidden    ">    
-          <h3 className=" text-3xl font-bold text-left text-purple-500 mx-auto" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
-          </div>
-          </div>
-          <div className=" w-full">
+          <div className='h-[301px] bg-gray-100 rounded-3xl shadow-inner overflow-hidden'>
             <img
                   src={project.imageUrl}
-                  className='w-full mb-4 mt-4'
-              />    
+                  className='w-11/12 mx-auto my-5'
+              /> 
+            </div>
+
+          
+
+            </div>   
+          
+          
+          <div className='w-5/12 float-right'>
+
+          <div className=" bg-gray-100  h-20 w-full rounded-3xl py-7 mb-4 shadow-inner whitespace-normal ">
+          <p className="text-xl font-semibold ">{project.date}</p>
           </div>
-          <div className=" bg-gray-100 text-black md:py-5 w-full mx-auto px-5 rounded-3xl mb-4 shadow-inner whitespace-normal">
-            <p className="text-2xl font-bold">{project.description}</p> 
+
+          <div className=" bg-gray-100 text-black py-4 px-7 w-full h-36 rounded-3xl mb-4 shadow-inner whitespace-normal">
+            <p className="text-xl text-center font-semibold">{project.description}</p> 
+          </div>
+
+          <div className="bg-gray-100 text-black h-36 md:py-4 w-1/2 ml-4 float-right rounded-3xl shadow-inner whitespace-normal  ">
+            <p className="text-xl mx-auto w-1/2 font-semibold bg-gradient-to-r from-blue-600 via-black-500 to-white-400 inline-block text-transparent bg-clip-text" dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
+          </div>
+
+          <div className=" bg-gray-100 text-black h-36 py-4 w-auto rounded-3xl shadow-inner whitespace-normal overflow-hidden ">
+         <p className="text-xl mx-auto w-3/4 font-semibold  " dangerouslySetInnerHTML = {{__html:project.awards}}></p>
+          </div>
+
+          
+
           </div>
           
-          <div className="bg-gray-100 text-black md:py-5 md:w-1/2 float-right rounded-3xl shadow-inner whitespace-normal -mx-2">
-            <p className="text-2xl mx-auto w-1/2 font-bold" dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
-          </div>
+          <div className='mx-auto  w-2/12'>
 
-          <div className=" bg-gray-100 text-black py-5 md:w-1/2 rounded-3xl shadow-inner whitespace-normal -mx-2 ">
-         <p className="text-2xl mx-auto w-3/4 font-bold " dangerouslySetInnerHTML = {{__html:project.awards}}></p>
-          </div>
-
-          <div className='mt-4 mx-auto w-3/12'>
           <motion.div 
            whileHover={{ y:-10}}
-          className=' w-5/12 float-right'>
+          className=' w-5/12 mt-20 float-right'>
           <a            
           href={project.live} target="_blank" >
             <img src="export.png" className="w-full" alt="Export" />
@@ -145,7 +126,7 @@ const Projects = () => {
             </motion.div>
           <motion.div 
           whileHover={{ y:-10}}
-          className=" w-5/12 ">
+          className=" w-5/12 mt-20 float-left ">
         <a href={project.github} target="_blank" >
         <img src="GitHub.png" className="w-full " alt="GitHub" />
         </a>
@@ -153,6 +134,7 @@ const Projects = () => {
 
         
               </div>
+            
 
 
           

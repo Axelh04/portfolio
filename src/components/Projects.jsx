@@ -48,16 +48,18 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <>
-      <div id="portfolio" className='h-10'>
+    <div  id="portfolio" classname = "relative overflow-hidden shadow-inner bg-white ltr mt-0 border border-black z-50 ">
+      <div 
+      id="portfolio"
+      className='h-32'
+      >
 
       </div>
-    <motion.h1  className="text-5xl relative font-bold text-color text-center mt-20 mb-32">Portfolio</motion.h1>
-    <div className="relative overflow-hidden md:mt-20 ltr">
 
+    <motion.h1  className="text-5xl font-bold text-color text-center mt-0 mb-32 ">Portfolio</motion.h1>
 
-       
     <div className="overflow-x-scroll snap-x snap-mandatory p-0 whitespace-nowrap">
+
     <div className="inline-block w-1/2"></div>
     
       {projectsData.map((project, index) => (
@@ -94,19 +96,19 @@ const Projects = () => {
           
           <div className='w-5/12 float-right'>
 
-          <div className=" bg-gray-100  h-20 w-full rounded-3xl py-7 mb-4 shadow-inner whitespace-normal ">
+          <div className=" bg-gray-100 text-gray-600 h-20 w-full rounded-3xl py-7 mb-4 shadow-inner whitespace-normal ">
           <p className="text-xl font-semibold ">{project.date}</p>
           </div>
 
-          <div className=" bg-gray-100 text-black py-4 px-7 w-full h-36 rounded-3xl mb-4 shadow-inner whitespace-normal">
+          <div className=" bg-gray-100 text-gray-600 py-4 px-7 w-full h-36 rounded-3xl mb-4 shadow-inner whitespace-normal">
             <p className="text-xl text-center font-semibold">{project.description}</p> 
           </div>
 
-          <div className="bg-gray-100 text-black h-36 md:py-4 w-1/2 ml-4 float-right rounded-3xl shadow-inner whitespace-normal  ">
+          <div className="bg-gray-100 text-gray-600 h-36 md:py-4 w-1/2 ml-4 float-right rounded-3xl shadow-inner whitespace-normal  ">
             <p className="text-xl mx-auto w-1/2 font-semibold bg-gradient-to-r from-blue-600 via-black-500 to-white-400 inline-block text-transparent bg-clip-text" dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
           </div>
 
-          <div className=" bg-gray-100 text-black h-36 py-4 w-auto rounded-3xl shadow-inner whitespace-normal overflow-hidden ">
+          <div className=" bg-gray-100 text-gray-600 h-36 py-4 w-auto rounded-3xl shadow-inner whitespace-normal overflow-hidden ">
          <p className="text-xl mx-auto w-3/4 font-semibold  " dangerouslySetInnerHTML = {{__html:project.awards}}></p>
           </div>
 
@@ -145,8 +147,7 @@ const Projects = () => {
       ))}
       <div className="inline-block w-1/2"></div>
     </div>
-    </div>
-    </> 
+    </div> 
   );
 };
 

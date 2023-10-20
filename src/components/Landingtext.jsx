@@ -16,9 +16,9 @@ const Introtext = () => {
             transition={{ duration: 1.5, delay: 2 }}
           
             className=' absolute w-full z-10 md:mt-[700px] '          >
-            <span className='text-4xl text-gray-500 bg-gray-200 cursor-pointer rounded-3xl py-1 px-3'>
+            <span className='text-4xl text-gray-500 bg-gray-100 cursor-pointer rounded-3xl py-1 px-3 shadow-lg'>
               <Link
-                to="scroll-down-section"
+                to="aboutme"
                 smooth={true}
                 duration={1000}
                 spy={true}

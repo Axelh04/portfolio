@@ -13,7 +13,7 @@ const Navbarstatic = () => {
       animate={{scale: 1, x:0, width:450 }} // Animate with controls
       transition={{ duration: 2.5, delay: .5 }} // Adjust the transition duration
      
-      className='absolute rounded-3xl mx-auto z-50 overflow-hidden md:mt-[400px] bg-gray-200 shadow-inner'
+      className='absolute rounded-3xl mx-auto z-50 overflow-hidden md:mt-[400px] bg-gray-100 shadow-lg'
       >
         <motion.ul 
        

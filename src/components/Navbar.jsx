@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import { Link } from 'react-scroll';
-import { motion, useAnimation } from 'framer-motion'; // Import useAnimation
+import { motion, useAnimation, useDragControls } from 'framer-motion'; // Import useAnimation
 
 const Navbarstatic = () => {
 
   const [isSticky, setIsSticky] = useState(false);
   const controls = useAnimation(); // Create animation controls
+  const drag = useDragControls()
+  const constraintsRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,61 +30,57 @@ const Navbarstatic = () => {
 
   useEffect(() => {
     // Animate the Navbar's opacity and y position when it becomes sticky
-    controls.start({ opacity: isSticky ? 1 : 0, y: isSticky ? 0 : -10, scale: isSticky ? 1 : 1 });
+    controls.start({ opacity: isSticky ? 1 : 0, scale: isSticky ? 1 : 1 , y: isSticky ? 0 : -100});
   }, [isSticky, controls]);
 
 
   return (
+    <>
     <motion.div 
-    className='fixed top-0 w-full flex z-[10000] justify-center'>
+    ref={constraintsRef}
+    className='fixed top-4 left-4 right-auto w-14 h-14 flex z-[10000] justify-center'>
       <motion.nav
-      initial={{opacity:0, y:-50}} // Initial hidden state
+      initial={{opacity:0, width: 53}} // Initial hidden state
       animate={controls} // Animate with controls
-      transition={{ duration: .1 }} // Adjust the transition duration
-     
-      className= 'fixed w-full mx-auto  overflow-hidden  backdrop-blur-3xl'
+      transition={{ duration: .3 }}
+      whileHover={{x:200, width: 450}}
+      className= 'fixed w-auto mx-auto  overflow-hidden rounded-3xl bg-gray-100 shadow-lg'
       >
         <motion.ul 
-       
-        className='font-light w-full cursor-pointer flex flex-column overflow-hidden justify-between mx-auto py-1 rounded-3xl'>
+        className='font-base w-[450px] cursor-pointer overflow-hidden flex-column flex justify-between mx-auto py-2'>
 
-            <li className='block ml-36 mr-96 mr-1 mt-1 '>
-            <Link to = "home" className='text-3xl mr-4'  smooth={true} duration={1000}>
+          <li className='block ml-2  '>
+            <Link to = "home" className='text-3xl'  smooth={true} duration={1000}>
               🚀
             </Link>
-            <p className='text-xl text-black float-right font-light text-left leading-4'>
-              Axel<br /> Hernandez
-            </p>
           </li>
-
-
-        <li className='block mt-1 mb-1 mr-1 text-black  '>
-            <Link to="aboutme" className=' align-middle text-xl' smooth={true} duration={1000}>
+        <li className='block text-gray-600 py-1 mr-1 rounded-md hover:bg-gray-200 '>
+            <Link to="aboutme" className=' text-xl' smooth={true} duration={1000}>
               About
             </Link>
           </li>
-          <li className='block  mt-1 mb-1 mr-1 text-black'>
-            <Link to="experience" className='align-middle text-xl' smooth={true} duration={1000}>
+          <li className='block text-gray-600 p-1 mr-1 rounded-md hover:bg-gray-200'>
+            <Link to="experience" className=' text-xl' smooth={true} duration={1000}>
               Experience
             </Link>
           </li>
-          <li className='block mt-1 mb-1 mr-1 black'>
-            <Link to="portfolio" className='align-middle text-xl' smooth={true} duration={1000}>
+          <li className='block text-gray-600 p-1 mr-2 rounded-md hover:bg-gray-200'>
+            <Link to="portfolio" className=' text-xl' smooth={true} duration={1000}>
               Portfolio
             </Link>
           </li>
-          <li className='block mb-1 mr-36 mt-1 black'>
-            <Link to="contact" className=' align-middle text-xl' smooth={true} duration={1000}>
+          <li className='block text-gray-600  mr-8 p-1 rounded-md hover:bg-gray-200'>
+            <Link to="contact" className=' text-xl' smooth={true} duration={1000}>
               Contact
             </Link>
           </li>
         </motion.ul>
-
-        <div className='w-full relative h-1 bg-black'>
-
-        </div>
       </motion.nav>
+
     </motion.div>
+
+    </>
+
   );
 };
 

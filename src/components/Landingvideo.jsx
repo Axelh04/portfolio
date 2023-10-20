@@ -33,7 +33,7 @@ const Landing = () => {
 
   return (
     
-    <div className="relative" style={{height: '400px'}}>
+    <div className="relative" style={{height: '500px'}}>
     <div className={`w-full h-screen object-cover ${isSticky ? 'fixed top-0 left-0' : 'relative'}`}>
       <video muted className="w-full h-full object-cover">
         <source src="rocket.mp4" type="video/mp4" />

@@ -63,12 +63,9 @@ const links = [
     return (
       <>
       <motion.div 
-      initial={{ x: 0, y:100, opacity: 0 }}
-      animate={{ x: 0, y:-10, opacity: 1 }}
-      transition={{ duration: 2 }}
       id = "aboutme"
-      className="relative ml-5 mr-5 backdrop-blur-lg backdrop-brightness-[.85] rounded-3xl overflow-hidden py-32 mt-40" >
-      <div className='h-24'>
+      className="relative w-11/12 backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-20" >
+      <div >
       <motion.p 
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-25, opacity: 1 }}
@@ -115,13 +112,13 @@ const links = [
              animate={controls}
              exit="hidden" // Use the same exit variant as initial
              variants={fadeInVariants}
-             className=" overflow-hidden  md:text-4xl font-normal leading-8 text-white text-center py-5">
+             className=" overflow-hidden  md:text-4xl font-normal leading-8 text-white text-center py-16">
               I'm a <b>software engineer</b> born in Mexico, raised in Illinois, and currently a <b>sophomore</b> at the Illinois Institute of Technology. <b>From NASA to the Chicago tech scene</b>, I'm driven to make an impact through code. Join me on my journey to shape the future through software.
             </motion.p>
           </div>
 
           <div className=" mx-auto lg:mx-0 rounded-3xl">
-            <dl className=" md:ml-24 grid gap-4 gap-y-px sm:mt-20 grid-cols-4 grid-row-1 py-5">
+            <dl className=" md:ml-24 grid gap-4 gap-y-px grid-cols-4 grid-row-1 mt-16">
               {stats.map((stat,index) => (
                 <div key={index} className="flex flex-col-reverse text-left">
                   <dt className="text-base leading-7 text-white">{stat.name}{stat.name2}{stat.name3}{stat.name4}{stat.name5}</dt>

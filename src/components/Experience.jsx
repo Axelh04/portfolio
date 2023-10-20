@@ -35,17 +35,15 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div  className=" relative mt-0 mb-0 z-50">
-      <div id="experience" className='h-10'>
-
-      </div>
-      <motion.h1 className="text-5xl font-bold text-center mt-20 mb-32 text-black ">Experience</motion.h1>
+    <div  id="experience"  className=" bg-gray-100 shadow-inner bg-opacity-50 backdrop-filter-md relative mt-32 z-50 py-32">
+     
+      <motion.h1 className="text-5xl font-bold text-center mb-32 text-black ">Experience</motion.h1>
       <div className="flex flex-wrap justify-center">
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className=" backdrop-blur-xl backdrop-brightness-[.96] shadow-inner overflow-hidden w-full mr-5 ml-5 py-4 mb-4 "
-            style={{ borderRadius: '50px' }}
+            className="   bg-white shadow-sm overflow-hidden w-11/12 py-4 mb-4 "
+            style={{ borderRadius: '20px' }}
           >
             <div className="md:flex">
               <div className="md:w-1/3">

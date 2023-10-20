@@ -214,7 +214,7 @@ export default function Contact() {
         </div>
         <div className="mt-10">
           <motion.button
-            whileHover={{scale:1.05}}
+            whileHover={{scale:1.1}}
             whileTap={{scale:.95}}
             type="submit"
              value="Send"

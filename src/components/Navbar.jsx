@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { motion, useAnimation } from 'framer-motion'; // Import useAnimation
-import styles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbarstatic = () => {
+
   const [isSticky, setIsSticky] = useState(false);
   const controls = useAnimation(); // Create animation controls
 
@@ -28,45 +28,62 @@ const Navbar = () => {
 
   useEffect(() => {
     // Animate the Navbar's opacity and y position when it becomes sticky
-    controls.start({ opacity: isSticky ? 1 : 0, y: isSticky ? -2 : -10, scale: isSticky ? 1 : 1 });
+    controls.start({ opacity: isSticky ? 1 : 0, y: isSticky ? 0 : -10, scale: isSticky ? 1 : 1 });
   }, [isSticky, controls]);
 
-  const navbarClass = isSticky ? `${styles.navbar} ${styles.sticky}` : 'hidden';
 
   return (
-    <div className={styles['navbar-container']}>
+    <motion.div 
+    className='fixed top-0 w-full flex z-[10000] justify-center'>
       <motion.nav
-        className={navbarClass}
-        initial={{ opacity: 0, y: -50 }} // Initial hidden state
-        animate={controls} // Animate with controls
-        transition={{ duration: .1 }} // Adjust the transition duration
+      initial={{opacity:0, y:-50}} // Initial hidden state
+      animate={controls} // Animate with controls
+      transition={{ duration: .1 }} // Adjust the transition duration
+     
+      className= 'fixed w-full mx-auto  overflow-hidden  backdrop-blur-3xl'
       >
-        <ul>
-          <li>
-            <Link to="aboutme" smooth={true} duration={1000}>
-              About Me
+        <motion.ul 
+       
+        className='font-light w-full cursor-pointer flex flex-column overflow-hidden justify-between mx-auto py-1 rounded-3xl'>
+
+            <li className='block ml-36 mr-96 mr-1 mt-1 '>
+            <Link to = "home" className='text-3xl mr-4'  smooth={true} duration={1000}>
+              🚀
+            </Link>
+            <p className='text-xl text-black float-right font-light text-left leading-4'>
+              Axel<br /> Hernandez
+            </p>
+          </li>
+
+
+        <li className='block mt-1 mb-1 mr-1 text-black  '>
+            <Link to="aboutme" className=' align-middle text-xl' smooth={true} duration={1000}>
+              About
             </Link>
           </li>
-          <li>
-            <Link to="experience" smooth={true} duration={1000}>
+          <li className='block  mt-1 mb-1 mr-1 text-black'>
+            <Link to="experience" className='align-middle text-xl' smooth={true} duration={1000}>
               Experience
             </Link>
           </li>
-          <li>
-            <Link to="portfolio" smooth={true} duration={1000}>
+          <li className='block mt-1 mb-1 mr-1 black'>
+            <Link to="portfolio" className='align-middle text-xl' smooth={true} duration={1000}>
               Portfolio
             </Link>
           </li>
-          <li>
-            <Link to="contact" smooth={true} duration={1000}>
+          <li className='block mb-1 mr-36 mt-1 black'>
+            <Link to="contact" className=' align-middle text-xl' smooth={true} duration={1000}>
               Contact
             </Link>
           </li>
-        </ul>
-    
+        </motion.ul>
+
+        <div className='w-full relative h-1 bg-black'>
+
+        </div>
       </motion.nav>
-    </div>
+    </motion.div>
   );
 };
 
-export default Navbar;
+export default Navbarstatic;

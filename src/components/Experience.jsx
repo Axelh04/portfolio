@@ -44,7 +44,7 @@ const Experience = () => {
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className=" backdrop-blur-xl backdrop-brightness-[.96] shadow-inner overflow-hidden w-3/4 py-4 mb-4 "
+            className=" backdrop-blur-xl backdrop-brightness-[.96] shadow-inner overflow-hidden w-full mr-5 ml-5 py-4 mb-4 "
             style={{ borderRadius: '50px' }}
           >
             <div className="md:flex">

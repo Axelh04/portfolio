@@ -19,27 +19,27 @@ const Navbarstatic = () => {
        
         className='font-base w-[450px] cursor-pointer overflow-hidden flex-column flex justify-between mx-auto py-2 rounded-3xl'>
 
-        <li className='block ml-2 '>
+        <li className='block ml-2 rounded-xl hover:text-black'>
             <Link to = "home" className='text-3xl'  smooth={true} duration={1000}>
               🚀
             </Link>
           </li>
-        <li className='block text-gray-500 mt-1 mb-1  mr-1 '>
+        <li className='block text-gray-500 py-1  mr-1 rounded-xl hover:text-black'>
             <Link to="aboutme" className=' text-xl' smooth={true} duration={1000}>
               About
             </Link>
           </li>
-          <li className='block text-gray-500 mt-1 mb-1 mr-1 '>
+          <li className='block text-gray-500 py-1 mr-1 rounded-xl hover:text-black'>
             <Link to="experience" className=' text-xl' smooth={true} duration={1000}>
               Experience
             </Link>
           </li>
-          <li className='block text-gray-500 mt-1 mb-1 mr-2 '>
+          <li className='block text-gray-500 py-1 mr-2 rounded-xl hover:text-black'>
             <Link to="portfolio" className=' text-xl' smooth={true} duration={1000}>
               Portfolio
             </Link>
           </li>
-          <li className='block text-gray-500 mb-1 mr-8 mt-1'>
+          <li className='block text-gray-500 py-1 mr-8  rounded-xl hover:text-black'>
             <Link to="contact" className=' text-xl' smooth={true} duration={1000}>
               Contact
             </Link>

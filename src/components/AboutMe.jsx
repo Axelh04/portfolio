@@ -62,10 +62,14 @@ const links = [
 
     return (
       <>
-      <motion.div 
+      <div  
       id = "aboutme"
+ className='h-8'>
+
+      </div>
+      <motion.div 
       className="relative w-11/12 backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-16" >
-      <div >
+      <div className='h-16'>
       <motion.p 
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-25, opacity: 1 }}

@@ -65,7 +65,7 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-9/12 mr-36 snap-center snap-always mb-80 "
+          className="inline-block w-9/12 mr-36 snap-center snap-always mb-36 "
             >
 
 

@@ -38,7 +38,7 @@ const Navbarstatic = () => {
     <>
     <motion.div 
     ref={constraintsRef}
-    className='fixed top-4 left-4 right-auto w-14 h-14 flex z-[10000] justify-center'>
+    className='fixed top-5 left-5 right-auto w-14 h-14 flex z-[10000] justify-center'>
       <motion.nav
       initial={{opacity:0, width: 53}} // Initial hidden state
       animate={controls} // Animate with controls
@@ -49,27 +49,27 @@ const Navbarstatic = () => {
         <motion.ul 
         className='font-base w-[450px] cursor-pointer overflow-hidden flex-column flex justify-between mx-auto py-2'>
 
-          <li className='block ml-2  '>
+          <li className='block ml-2 rounded-xl hover:text-black '>
             <Link to = "home" className='text-3xl'  smooth={true} duration={1000}>
               🚀
             </Link>
           </li>
-        <li className='block text-gray-600 py-1 mr-1 rounded-md hover:bg-gray-200 '>
+        <li className='block text-gray-600 py-1 mr-1 rounded-xl hover:text-black '>
             <Link to="aboutme" className=' text-xl' smooth={true} duration={1000}>
               About
             </Link>
           </li>
-          <li className='block text-gray-600 p-1 mr-1 rounded-md hover:bg-gray-200'>
+          <li className='block text-gray-600 p-1 mr-1 rounded-xl hover:text-black'>
             <Link to="experience" className=' text-xl' smooth={true} duration={1000}>
               Experience
             </Link>
           </li>
-          <li className='block text-gray-600 p-1 mr-2 rounded-md hover:bg-gray-200'>
+          <li className='block text-gray-600 p-1 mr-2 rounded-xl hover:text-black'>
             <Link to="portfolio" className=' text-xl' smooth={true} duration={1000}>
               Portfolio
             </Link>
           </li>
-          <li className='block text-gray-600  mr-8 p-1 rounded-md hover:bg-gray-200'>
+          <li className='block text-gray-600  mr-8 p-1 rounded-xl hover:text-black'>
             <Link to="contact" className=' text-xl' smooth={true} duration={1000}>
               Contact
             </Link>

@@ -12,6 +12,8 @@ function classNames(...classes) {
 }
 
 export default function Contact() {
+
+
   // const [agreed, setAgreed] = useState(false)
   const [confirmationMessage, setConfirmationMessage] = useState('');
   const [formData, setFormData] = useState({
@@ -62,11 +64,11 @@ export default function Contact() {
   };
 
   return (
-    <div id='contact' className="relative lg:ml-5 lg:mr-5 rounded-3xl overflow-hidden  sm:py-32 mt-0 md:mb-10">
+    <div id='contact' className="relative w-11/12 rounded-3xl mx-auto overflow-hidden  sm:py-32 mt-0 md:mb-32">
 
         <video
-          src="rocket.mp4"
-          alt="aesthetic"
+          src="space.mp4"
+          alt="space"
           className="absolute inset-0 h-full -z-10 w-full object-cover object-right md:object-center"
           autoPlay
           muted
@@ -88,7 +90,7 @@ export default function Contact() {
                 name="user_first-name"
                 id="user_first-name"
                 autoComplete="given-name"
-                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
                 />
             </div>
 
@@ -104,25 +106,12 @@ export default function Contact() {
                 name="user_last-name"
                 id="user_last-name"
                 autoComplete="family-name"
-                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">
-              Company
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="user_company"
-                id="user_company"
-                autoComplete="organization"
-                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
+      
+          <div className="">
             <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
               Email
             </label>
@@ -132,11 +121,11 @@ export default function Contact() {
                 name="user_email"
                 id="user_email"
                 autoComplete="email"
-                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          <div className="">
             <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-white">
               Phone number
             </label>
@@ -152,7 +141,7 @@ export default function Contact() {
   onChange={(e) => {
     setFormData({ ...formData, user_country: e.target.value });
   }}
-  className="h-full border-0 bg-white py-0 pl-4 pr-9 text-black ring-black ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm"
+  className="h-full border-0 bg-white py-0 pl-4 pr-9 text-black ring-gray-100 ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm"
 >
   <option>US</option>
   <option>CA</option>
@@ -165,7 +154,22 @@ export default function Contact() {
                 name="user_number"
                 id="user_number"
                 autoComplete="tel"
-                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 pl-20 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 pl-20 text-white shadow-sm ring-1 ring-inset ring-gray-100 placeholder:text-gray focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+          <div className="sm:col-span-2">
+            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">
+              Company
+            </label>
+            <div className="mt-2.5">
+              <input
+                type="text"
+                name="user_company"
+                id="user_company"
+                autoComplete="organization"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -178,7 +182,7 @@ export default function Contact() {
                 name="message"
                 id="message"
                 rows={4}
-                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+                className="block w-full bg-transparent rounded-3xl border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
                 defaultValue={''}
               />
             </div>

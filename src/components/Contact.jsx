@@ -64,7 +64,7 @@ export default function Contact() {
   };
 
   return (
-    <div id='contact' className="relative w-11/12 rounded-3xl mx-auto overflow-hidden  sm:py-32 mt-0 md:mb-32">
+    <div id='contact' className="relative w-9/12 rounded-3xl mx-auto overflow-hidden  sm:py-32 mt-0 md:mb-32">
 
         <video
           src="space.mp4"

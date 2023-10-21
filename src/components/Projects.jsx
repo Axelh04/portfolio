@@ -65,7 +65,7 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-9/12 mr-36 snap-center snap-always mb-36 "
+          className="inline-block w-9/12 mr-36 snap-center snap-always mb-32 "
             >
 
 
@@ -82,10 +82,10 @@ const Projects = () => {
       
     
           
-          <div className='h-[301px] bg-gray-100 rounded-3xl shadow-inner overflow-hidden'>
+          <div className='h-[301px] relative bg-gray-100 rounded-3xl shadow-inner overflow-hidden'>
             <img
                   src={project.imageUrl}
-                  className='w-11/12 mx-auto my-5'
+                  className='w-3/4 absolute bottom-0 '
               /> 
             </div>
 
@@ -120,7 +120,7 @@ const Projects = () => {
 
           <motion.div 
            whileHover={{ y:-10}}
-          className=' w-5/12 mt-20 float-right'>
+          className=' w-4/12 mt-20 float-right'>
           <a            
           href={project.live} target="_blank" >
             <img src="export.png" className="w-full" alt="Export" />
@@ -128,7 +128,7 @@ const Projects = () => {
             </motion.div>
           <motion.div 
           whileHover={{ y:-10}}
-          className=" w-5/12 mt-20 float-left ">
+          className=" w-4/12 mt-20 float-left ">
         <a href={project.github} target="_blank" >
         <img src="GitHub.png" className="w-full " alt="GitHub" />
         </a>

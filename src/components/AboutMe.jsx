@@ -64,17 +64,17 @@ const links = [
       <>
       <div  
       id = "aboutme"
- className='h-8'>
+ className='h-16'>
 
       </div>
       <motion.div 
-      className="relative w-11/12 backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-16" >
+      className="relative max-w-7xl backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-16" >
       <div className='h-16'>
       <motion.p 
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-25, opacity: 1 }}
       transition={{ duration: 2.1 }}
-      className="grid grid-cols-4 md:w-5/6 md:gap-24 md:mx-auto z-0">
+      className="grid grid-cols-4 w-5/6 md:gap-24 mx-auto z-0">
               {links.map((link) => (
                 <motion.a key={link.name} href={link.href} target="_blank"
                 whileHover={{ y:-10}}

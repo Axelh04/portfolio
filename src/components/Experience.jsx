@@ -40,12 +40,14 @@ const Experience = () => {
      id="experience"  className=" bg-gray-100 shadow-inner bg-opacity-50 backdrop-filter-md relative mt-96 z-50 py-32">
      
       <motion.h1 className="text-5xl font-bold text-center mb-32 text-black ">Experience</motion.h1>
-      <div className="flex flex-wrap justify-center">
+      <div 
+      style={{ borderRadius: '50px' }}
+      className="flex flex-wrap justify-center  w-9/12 mx-auto  overflow-hidden">
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className="   bg-white shadow-sm overflow-hidden w-11/12 py-4 mb-4 "
-            style={{ borderRadius: '20px' }}
+            className="   bg-white shadow-sm overflow-hidden py-4 mb-1 w-full "
+            style={{ borderRadius: '0px' }}
           >
             <div className="md:flex">
               <div className="md:w-1/3">

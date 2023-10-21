@@ -44,7 +44,7 @@ const Navbarstatic = () => {
       animate={controls} // Animate with controls
       transition={{ duration: .3 }}
       whileHover={{x:200, width: 450}}
-      className= 'fixed w-auto mx-auto  overflow-hidden rounded-3xl bg-gray-100 shadow-lg'
+      className= 'fixed w-auto mx-auto  overflow-hidden rounded-3xl bg-gray-100 shadow-xl'
       >
         <motion.ul 
         className='font-base w-[450px] cursor-pointer overflow-hidden flex-column flex justify-between mx-auto py-2'>

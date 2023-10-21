@@ -4,7 +4,7 @@ import { scroll, motion } from "framer-motion";
 
 const Landing = () => {
   const [isSticky, setIsSticky] = useState(true);
-  const scrollThreshold = 3000;
+  const scrollThreshold = 2000;
   
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Landing = () => {
 
     scroll((progress) => {
         if (video.readyState) {
-          video.currentTime = video.duration * 2 * progress;
+          video.currentTime = video.duration * progress * 2;
         }
       });
 

@@ -35,7 +35,9 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div  id="experience"  className=" bg-gray-100 shadow-inner bg-opacity-50 backdrop-filter-md relative mt-32 z-50 py-32">
+    <motion.div
+    
+     id="experience"  className=" bg-gray-100 shadow-inner bg-opacity-50 backdrop-filter-md relative mt-96 z-50 py-32">
      
       <motion.h1 className="text-5xl font-bold text-center mb-32 text-black ">Experience</motion.h1>
       <div className="flex flex-wrap justify-center">
@@ -64,7 +66,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

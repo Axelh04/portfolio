@@ -76,7 +76,7 @@ const Projects = () => {
 
 
           <div className=" bg-gray-100 w-full rounded-3xl h-20 py-5 mb-4 shadow-inner whitespace-normal  ">    
-          <h3 className=" text-3xl font-bold  mx-auto bg-gradient-to-r from-blue-600 via-purple-500 to-white-900 inline-block text-transparent bg-clip-text " dangerouslySetInnerHTML = {{__html:project.title}}></h3>
+          <h3 className=" text-3xl font-bold  mx-auto text-gray-600" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
           </div>
         
       
@@ -105,7 +105,7 @@ const Projects = () => {
           </div>
 
           <div className="bg-gray-100 text-gray-600 max-h-min py-4 w-1/2 ml-4 float-right rounded-3xl shadow-inner whitespace-normal  ">
-            <p className="text-xl mx-auto w-1/2 font-semibold bg-gradient-to-r from-blue-600 via-black-500 to-white-400 inline-block text-transparent bg-clip-text" dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
+            <p className="text-xl mx-auto w-1/2 font-semibold " dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
           </div>
 
           <div className=" bg-gray-100 text-gray-600 max-h-min py-4 w-auto rounded-3xl shadow-inner whitespace-normal overflow-hidden ">

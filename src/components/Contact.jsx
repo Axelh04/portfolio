@@ -65,7 +65,7 @@ export default function Contact() {
 
   return (
     <div className='py-32 bg-gray-100'>
-    <div id='contact' className="relative w-full rounded-3xl mx-auto overflow-hidden py-32 mt-0">
+    <div id='contact' className="relative w-full sm:rounded-3xl mx-auto overflow-hidden py-32 mt-0">
 
         <video
           src="space.mp4"

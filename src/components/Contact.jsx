@@ -64,12 +64,13 @@ export default function Contact() {
   };
 
   return (
-    <div id='contact' className="relative w-9/12 rounded-3xl mx-auto overflow-hidden  sm:py-32 mt-0 md:mb-32">
+    <div className='py-32 bg-gray-100'>
+    <div id='contact' className="relative w-full rounded-3xl mx-auto overflow-hidden py-32 mt-0">
 
         <video
           src="space.mp4"
           alt="space"
-          className="absolute inset-0 h-full -z-10 w-full object-cover object-right md:object-center"
+          className="absolute inset-0 h-full z-1 md:w-9/12 mx-auto object-cover object-center md:object-center rounded-3xl "
           autoPlay
           muted
           loop
@@ -237,6 +238,7 @@ export default function Contact() {
       </section>
 
     
+    </div>
     </div>
   )
 }

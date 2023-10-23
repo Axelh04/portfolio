@@ -4,7 +4,7 @@ import { scroll, motion } from "framer-motion";
 
 const Landing = () => {
   const [isSticky, setIsSticky] = useState(true);
-  const scrollThreshold = 2500;
+  const scrollThreshold = 2800;
   
 
   useEffect(() => {

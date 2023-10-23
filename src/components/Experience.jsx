@@ -54,10 +54,10 @@ const Experience = () => {
                 <img
                   src={experience.imageUrl}
                   alt={experience.companyName}
-                  className=" w-3/4 mx-auto my-10 mt-14"
+                  className=" relative w-3/4 mx-auto sm:top-1/2 sm:-my-8 lg:py-0 py-10"
                 />
               </div>
-              <div className="p-3 text-left md:w-2/3">  
+              <div className="p-3 text-left md:w-2/3 sm:ml-0 ml-10 ">  
               <p className="text-base text-gray-600 mb-1">{experience.date}</p>
                 <h2 className="text-2xl font-semibold mb-1">{experience.companyName}</h2>               
                  <p className="text-base text-gray-600 mb-2">{experience.location}</p>

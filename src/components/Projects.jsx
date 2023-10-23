@@ -13,8 +13,8 @@ const projectsData = [
   {
     title: '3D Braille Generator ',
     date: 'July, 2023',
-    awards: 'In association with the MSI Accessiblity Effort',
-    description: 'Converts user-input text into a 3D .stl file, enabling a 3D printer to produce Braille representations, with the goal of aiding visually impaired guests',
+    awards: 'In association<br />with the<br />MSI Accessiblity<br />Effort',
+    description: 'This project involves the development of a user-friendly application that translates text input into a 3D .stl file format, allowing for the creation of tactile Braille representations through 3D printing technology. The ultimate objective is to enhance the accessibility of information for visually impaired individuals, particularly in public spaces and facilities.',
     technologies: 'C,<br />C#,<br />Terminal,<br />STL',
     imageUrl: 'braille.png',
     github: 'https://github.com/Axelh04/brailleSTL_generator',
@@ -23,9 +23,9 @@ const projectsData = [
   {
     title: 'SweetDeals',
     date: 'Oct, 2022',
-    description: 'Mobile trick or treating marketplace built with Flutter, and hosted with Heroku. Market compatible with IOS/Android',
-    awards: 'MLH DemonHacks Hackathon Project',
-    technologies: 'Flutter, Dart, Heroku, Firebase',
+    description: 'Develop a user-friendly mobile trick or treating marketplace using Flutter, hosted on Heroku, with compatibility for both iOS and Android platforms. This platform will enable seamless and enjoyable Halloween festivities for users of all devices.',
+    awards: 'MLH<br />DemonHacks<br />Hackathon<br />Project',
+    technologies: 'Flutter,<br />Dart,<br />Heroku,<br />Firebase',
     imageUrl: 'sweet1.png',
     live: 'https://devpost.com/software/test-ida1un',
     github: 'https://github.com/Dodhon/DemonHacks2022/tree/Frontend'
@@ -35,9 +35,9 @@ const projectsData = [
   {
     title:'Computational Mechanics',
     date: 'Aug, 2022',
-    description: 'An interactive tool to animate the aerodynamics of a ball using a open source webbased IDE for teaching faciliation.',
-    awards: '1st place in Class Trajectory Competition',
-    technologies: 'Python, VPython, Glowscript, Math',
+    description: 'This project aims to create an engaging educational tool that visualizes and explains the principles of aerodynamics in a fun and interactive manner, promoting a deeper understanding of how air influences the motion of a ball.',
+    awards: '1st place<br />Class<br />Trajectory<br />Competition',
+    technologies: 'Python,<br />VPython,<br />Glowscript,<br />Math',
     imageUrl: 'aero.png',
     github: '',
     live: 'https://glowscript.org/#/user/ahernandez53/folder/MyPrograms/program/website2'
@@ -60,7 +60,7 @@ const Projects = () => {
 
     <div className="overflow-x-scroll snap-x snap-mandatory p-0 whitespace-nowrap">
 
-    <div className="inline-block w-1/2"></div>
+    <div className="inline-block w-9/12"></div>
     
       {projectsData.map((project, index) => (
         <motion.div
@@ -71,7 +71,7 @@ const Projects = () => {
 
 
 
-          <div className='w-7/12 float-left -mx-4'>
+          <div className='md:w-7/12 w-full md:float-left sm:relative md:-mx-4'>
           
 
 
@@ -82,10 +82,10 @@ const Projects = () => {
       
     
           
-          <div className='h-[301px] relative bg-gray-100 rounded-3xl shadow-inner overflow-hidden'>
+          <div className='lg:h-[301px] relative md:bg-gray-100 rounded-3xl md:shadow-inner md:overflow-hidden py-0 mb-4'>
             <img
                   src={project.imageUrl}
-                  className='w-3/4 absolute bottom-0 '
+                  className=' max-h-[301px] relative mx-auto'
               /> 
             </div>
 
@@ -94,22 +94,22 @@ const Projects = () => {
             </div>   
           
           
-          <div className='w-5/12 float-right'>
+          <div className='md:w-5/12 md:float-right sm:relative w-full'>
 
           <div className=" bg-gray-100 text-gray-600 h-20 w-full rounded-3xl py-7 mb-4 shadow-inner whitespace-normal ">
           <p className="text-xl font-semibold ">{project.date}</p>
           </div>
 
-          <div className=" bg-gray-100 text-gray-600 py-4 px-7 w-full h-36 rounded-3xl mb-4 shadow-inner whitespace-normal">
-            <p className="text-xl text-center font-semibold">{project.description}</p> 
+          <div className=" bg-gray-100 text-gray-600 py-4 px-7 w-full max-h-min rounded-3xl mb-4 shadow-inner whitespace-normal">
+            <p className="line-clamp-4 hover:line-clamp-none text-xl text-center font-semibold">{project.description}</p> 
           </div>
 
-          <div className="bg-gray-100 text-gray-600 h-36 md:py-4 w-1/2 ml-4 float-right rounded-3xl shadow-inner whitespace-normal  ">
+          <div className="bg-gray-100 text-gray-600 max-h-min py-4 w-1/2 ml-4 float-right rounded-3xl shadow-inner whitespace-normal  ">
             <p className="text-xl mx-auto w-1/2 font-semibold bg-gradient-to-r from-blue-600 via-black-500 to-white-400 inline-block text-transparent bg-clip-text" dangerouslySetInnerHTML = {{__html:project.technologies}}></p>
           </div>
 
-          <div className=" bg-gray-100 text-gray-600 h-36 py-4 w-auto rounded-3xl shadow-inner whitespace-normal overflow-hidden ">
-         <p className="text-xl mx-auto w-3/4 font-semibold  " dangerouslySetInnerHTML = {{__html:project.awards}}></p>
+          <div className=" bg-gray-100 text-gray-600 max-h-min py-4 w-auto rounded-3xl shadow-inner whitespace-normal overflow-hidden ">
+         <p className=" line-clamp-4 hover:line-clamp-none text-xl mx-auto w-3/4 font-semibold  " dangerouslySetInnerHTML = {{__html:project.awards}}></p>
           </div>
 
           

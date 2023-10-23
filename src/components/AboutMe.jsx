@@ -22,13 +22,13 @@ const links = [
     { name3:'Firebase'},
     { name3:'Vite'},
     { name4:'C/C++'},
-    { name4:'TailwindCSS/CSS'},
+    { name4:'TailwindCSS'},
     { name4:'Heroku'},
     { name4:'Git'},
     { name5:'Dart'},
     { name5:'Flutter'},
     { name5:'Github'},
-    { name5:'Adobe Suite'}
+    { name5:'Adobe'}
 
   ]
 
@@ -68,18 +68,18 @@ const links = [
 
       </div>
       <motion.div 
-      className="relative max-w-7xl backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-16" >
+      className="relative md:max-w-max sm:w-5/6 w-9/12 backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-16" >
       <div className='h-16'>
       <motion.p 
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-25, opacity: 1 }}
       transition={{ duration: 2.1 }}
-      className="grid grid-cols-4 w-5/6 md:gap-24 mx-auto z-0">
+      className=" relative grid lg:grid-cols-4 grid-cols-2 w-5/6 lg:gap-24 gap-4 mx-auto z-0">
               {links.map((link) => (
                 <motion.a key={link.name} href={link.href} target="_blank"
                 whileHover={{ y:-10}}
                 whileTap={{backgroundColor:'whitesmoke', color:'black'}}
-                className="block text-white hover:backdrop-blur-3xl hover:border text-2xl rounded-xl md:w-36">
+                className="block text-white hover:backdrop-blur-3xl hover:border md:text-2xl text-lg rounded-xl md:w-36 mx-auto">
                   {link.name} <span aria-hidden="true">&rarr;</span>
                 </motion.a>
               ))}
@@ -116,17 +116,17 @@ const links = [
              animate={controls}
              exit="hidden" // Use the same exit variant as initial
              variants={fadeInVariants}
-             className=" overflow-hidden  md:text-4xl font-normal leading-8 text-white text-center py-16">
+             className=" overflow-hidden  md:text-4xl text-2xl font-normal leading-7 text-white text-center py-8">
               I'm a <b>software engineer</b> born in Mexico, raised in Illinois, and currently a <b>sophomore</b> at the Illinois Institute of Technology. <b>From NASA to the Chicago tech scene</b>, I'm driven to make an impact through code. Join me on my journey to shape the future through software.
             </motion.p>
           </div>
 
-          <div className=" mx-auto lg:mx-0 rounded-3xl">
-            <dl className=" md:ml-24 grid gap-4 gap-y-px grid-cols-4 grid-row-1 mt-16">
+          <div className=" rounded-3xl mt-8 md:w-5/6 w-full mx-auto ">
+            <dl className="  grid lg:gap-x-44 sm:gap-x-10 gap-x-5 gap-y-px grid-cols-4 grid-cols-4 grid-row-1">
               {stats.map((stat,index) => (
-                <div key={index} className="flex flex-col-reverse text-left">
-                  <dt className="text-base leading-7 text-white">{stat.name}{stat.name2}{stat.name3}{stat.name4}{stat.name5}</dt>
-                  <dd className="text-2xl font-bold leading-9 tracking-tight text-white mr-10">{stat.value}</dd>
+                <div key={index} className="flex flex-col-reverse sm:text-left text-center">
+                  <dt className="md:text-base text-sm md:leading-7 leading-1 text-white">{stat.name}{stat.name2}{stat.name3}{stat.name4}{stat.name5}</dt>
+                  <dd className="md:text-2xl text-sm font-bold sm:leading-9 tracking-tight text-white ">{stat.value}</dd>
                 </div>
               ))}
             </dl>

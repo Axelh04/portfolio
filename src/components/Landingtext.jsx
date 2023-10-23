@@ -40,7 +40,7 @@ const Introtext = () => {
               Portfolio
             </Link>
           </li>
-          <li className='block text-gray-500 py-1 mr-8  rounded-xl hover:text-black mb-3'>
+          <li className='block text-gray-500 py-1 mr-8  rounded-xl hover:text-black'>
             <Link to="contact" className='md:text-xl text-md' smooth={true} duration={1000}>
               Contact
             </Link>

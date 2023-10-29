@@ -3,11 +3,11 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const links = [
-    { name: 'Resume', href: 'https://drive.google.com/file/d/1QefmsFY4zvy6LjUxo3gNa4zj-TxVhYf1/view?usp=sharing' },
+    { name: 'Resume', href: 'https://drive.google.com/file/d/1XRVr3Xu4EVO95xZuFJ8Kti4FRsxt3Srm/view?usp=sharing' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/axel-hernandez2026' },
     { name: 'Github', href: 'https://github.com/Axelh04' },
     { name: 'Medium', href: 'https://medium.com/@axelwork2004' },
-  ]
+  ] 
   const stats = [
     { name: 'Java', value: 'Languages' },
     { name: 'React', value: 'Frameworks' },
@@ -74,7 +74,7 @@ const links = [
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-25, opacity: 1 }}
       transition={{ duration: 2.1 }}
-      className=" relative grid lg:grid-cols-4 grid-cols-2 w-5/6 lg:gap-24 gap-4 mx-auto z-0">
+      className=" relative grid md:grid-cols-4 grid-cols-2 w-5/6 lg:gap-24 gap-4 mx-auto z-0">
               {links.map((link) => (
                 <motion.a key={link.name} href={link.href} target="_blank"
                 whileHover={{ y:-10}}

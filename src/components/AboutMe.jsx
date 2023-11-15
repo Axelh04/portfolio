@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const links = [
-    { name: 'Resume', href: 'https://drive.google.com/file/d/15Y-MteIjNxlZouqOdYq7JEa0KDgDMXES/view?usp=sharing' },
+    { name: 'Resume', href: 'https://drive.google.com/file/d/10Zj0_9Owpxv3NSGEa5NI3GQVkbycwcV-/view?usp=sharing' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/axel-hernandez2026' },
     { name: 'Github', href: 'https://github.com/Axelh04' },
     { name: 'Medium', href: 'https://medium.com/@axelwork2004' },

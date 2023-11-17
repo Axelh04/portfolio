@@ -13,8 +13,8 @@ const projectsData = [
   {
     title: '3D Braille Generator ',
     date: 'July, 2023',
-    awards: 'In association<br />with the<br />MSI Accessiblity<br />Effort',
-    description: 'This project involves the development of a user-friendly application that translates text input into a 3D .stl file format, allowing for the creation of tactile Braille representations through 3D printing technology. The ultimate objective is to enhance the accessibility of information for visually impaired individuals, particularly in public spaces and facilities.',
+    awards: 'Associated<br />with the MSI<br />Accessiblity<br />Effort',
+    description: 'This project involves the development of a application that translates text input into a 3D .stl file format, allowing for tactile Braille representations through 3D printing technology. The objective is to enhance accessibility of information in museum exhibits.',
     technologies: 'C,<br />C#,<br />Terminal,<br />STL',
     imageUrl: 'braille.png',
     github: 'https://github.com/Axelh04/brailleSTL_generator',
@@ -35,7 +35,7 @@ const projectsData = [
   {
     title:'Computational Mechanics',
     date: 'Aug, 2022',
-    description: 'This project aims to create an engaging educational tool that visualizes and explains the principles of aerodynamics in a fun and interactive manner, promoting a deeper understanding of how air influences the motion of a ball.',
+    description: 'This project aims to create an engaging educational tool that visualizes and explains the principles of aerodynamics in a fun, easy, and interactive manner, promoting a deeper understanding of how air influences the motion of a ball.',
     awards: '1st place<br />Class<br />Trajectory<br />Competition',
     technologies: 'Python,<br />VPython,<br />Glowscript,<br />Math',
     imageUrl: 'aero.png',
@@ -58,31 +58,31 @@ const Projects = () => {
 
     <motion.h1  className="text-5xl font-bold text-color text-center mt-0 mb-32 ">Portfolio</motion.h1>
 
-    <div className="overflow-x-scroll snap-x snap-mandatory p-0 whitespace-nowrap">
+    <div className="overflow-x-scroll snap-x snap-mandatory border p-0 whitespace-nowrap">
 
     <div className="inline-block w-9/12"></div>
     
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-9/12 sm:mr-20 mr-8 snap-center snap-always mb-32 "
+          className="inline-block w-9/12 border top-0 md:mr-20 mr-8 snap-center snap-always mb-32 "
             >
 
 
 
 
-          <div className='md:w-7/12 w-full md:float-left sm:relative md:-mx-4'>
+          <div className='md:w-7/12 w-full md:float-left relative md:-mx-4'>
           
 
 
-          <div className=" bg-gray-100 w-full rounded-3xl h-20 py-5 mb-4 shadow-inner whitespace-normal  ">    
+          <div className=" bg-gray-100 w-full rounded-3xl sm:h-20 h-min py-5 mb-4 shadow-inner whitespace-normal  ">    
           <h3 className=" sm:text-3xl text-2xl font-bold  mx-auto text-gray-600" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
           </div>
         
       
     
           
-          <div className='lg:h-[301px] relative md:bg-gray-100 rounded-3xl md:shadow-inner md:overflow-hidden py-0 mb-4'>
+          <div className='lg:max-h-[301px] relative md:bg-gray-100 rounded-3xl md:shadow-inner md:overflow-hidden py-0 mb-4'>
             <img
                   src={project.imageUrl}
                   className=' max-h-[301px] relative mx-auto'
@@ -94,14 +94,14 @@ const Projects = () => {
             </div>   
           
           
-          <div className='md:w-5/12 md:float-right sm:relative w-full'>
+          <div className='md:w-5/12 md:float-right relative w-full'>
 
           <div className=" bg-gray-100 text-gray-600 h-20 w-full rounded-3xl py-7 mb-4 shadow-inner whitespace-normal ">
           <p className="text-xl font-semibold ">{project.date}</p>
           </div>
 
           <div className=" bg-gray-100 text-gray-600 py-4 px-7 w-full max-h-min rounded-3xl mb-4 shadow-inner whitespace-normal">
-            <p className="line-clamp-4 hover:line-clamp-none text-xl text-center font-semibold">{project.description}</p> 
+            <p className="md:line-clamp-4 hover:line-clamp-none line-clamp-none   text-xl text-center font-semibold">{project.description}</p> 
           </div>
 
           <div className="bg-gray-100 text-gray-600 max-h-min py-4 w-1/2 ml-4 float-right rounded-3xl shadow-inner whitespace-normal  ">

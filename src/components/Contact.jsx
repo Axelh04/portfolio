@@ -70,12 +70,12 @@ export default function Contact() {
         <video
           src="space.mp4"
           alt="space"
-          className="absolute inset-0 h-full z-1 md:w-9/12 mx-auto object-cover object-center md:object-center rounded-3xl "
+          className="absolute inset-0 h-full z-1 lg:w-9/12 w-full mx-auto object-cover object-center md:object-center lg:rounded-3xl "
           autoPlay
           muted
           loop
         />
-    <section className=" backdrop-blur-md backdrop-brightness-[.5] rounded-3xl mx-auto w-max px-10 py-10">
+    <section className=" backdrop-blur-md backdrop-brightness-[.5] rounded-3xl mx-auto sm:w-max w-11/12 px-10 py-10">
       <div className="mx-auto max-w-2xl text-center ">
         <h1 className="text-5xl font-bold tracking-tight text-white ">Contact Me</h1>
       </div>

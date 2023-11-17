@@ -35,7 +35,11 @@ const Landing = () => {
     
     <div className="relative" style={{height: '500px'}}>
     <div className={`w-full h-screen object-cover ${isSticky ? 'fixed top-0 left-0' : 'relative'}`}>
-      <video muted className="w-full h-full object-cover">
+    <video autoplay muted className="w-full h-full object-cover sm:hidden">
+        <source src="rocket.mp4" type="video/mp4" />
+        
+      </video>
+      <video muted className="w-full h-full object-cover sm:visible hidden">
         <source src="rocket.mp4" type="video/mp4" />
         
       </video>

@@ -39,7 +39,7 @@ const projectsData = [
     awards: '1st place<br />Class<br />Trajectory<br />Competition',
     technologies: 'Python,<br />VPython,<br />Glowscript,<br />Math',
     imageUrl: 'aero.png',
-    github: '',
+    github: 'https://glowscript.org/#/user/ahernandez53/folder/MyPrograms/program/website2',
     live: 'https://glowscript.org/#/user/ahernandez53/folder/MyPrograms/program/website2'
   },
   
@@ -48,7 +48,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <div  id="portfolio" classname = "relative overflow-hidden shadow-inner bg-white ltr mt-0 border border-black z-50 ">
+    <div  className = "relative overflow-hidden shadow-inner bg-white ltr mt-0 z-50 ">
       <div 
       id="portfolio"
       className='h-32'
@@ -65,7 +65,7 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-9/12 mr-36 snap-center snap-always mb-32 "
+          className="inline-block w-9/12 mr-20 snap-center snap-always mb-32 "
             >
 
 

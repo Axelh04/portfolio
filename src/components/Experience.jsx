@@ -2,32 +2,32 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const experiences = [
-  {
-    companyName: 'Software and Engineering Mentor',
-    date: 'Sep 2023 - Present',
-    location: 'Mentor | Chicago, IL',
-    description: '-Led the rebranding effort of the institutes engineering lab, elevating its significant for students<br />-Mastery in laser cutting, and 3D printing software for Human Computer Interaction (HCI) development<br />-Mentored groups of at least 20 students weekly in electrical, software, and computer engineering.',
-    imageUrl: 'klpng.png', // Replace with your image URL
-  },
+  // {
+  //   companyName: 'Software and Engineering Mentor',
+  //   date: 'Sep 2023 - Present',
+  //   location: 'Mentor | Chicago, IL',
+  //   description: '• Elevated the engineering lab, as a leader of its mentor program through a software engineering focus<br />• Mastery in laser cutting, and 3D printing software for Human Computer Interaction (HCI) development<br />• Mentored groups of at least 20 students weekly in electrical, software, and computer engineering.',
+  //   imageUrl: 'klpng.png', // Replace with your image URL
+  // },
   {
     companyName: 'Fab-lab Software Developer',
     date: 'May 2023 - Aug-2023',
     location: 'Internship | Chicago, IL',
-    description: '-Created 3D printable Braille Generator using C, C#, Terminal, STL; turns text input to Braille STL files<br />-Boosted MSI accessibility by 30% through exhibit involvement in printable Braille<br />-Built the museums largest fabrication camp in history, guided over 120 South Side of Chicago kids',
+    description: '• Created 3D printable Braille Generator using C, C#, Terminal, STL; turns text input to Braille STL files<br />• Boosted MSI accessibility by 30% through exhibit involvement in printable Braille<br />• Built the museums largest fabrication camp in history, guided over 120 South Side of Chicago kids',
     imageUrl: 'msipng.png', // Replace with your image URL
   },
   {
     companyName: 'Deputy Project Manager',
     date: 'Jan 2023 - May-2023',
     location: 'Mentorship | Tempe, AZ',
-    description: '-Participated in NASA 12-week team-oriented program; the LSPACE Mission Concept Academy<br />-Skillfully located $275,000,000 for Mars Polar Layered Deposits mission with V&V, risk, trade studies<br />-Spearheaded software and system engineering utilizing new technologies for our 100+ page proposal',
+    description: '• Participated in NASA 12-week team-oriented program; the LSPACE Mission Concept Academy<br />• Skillfully located $275,000,000 for Mars Polar Layered Deposits mission with V&V, risk, trade studies<br />• Spearheaded software and system engineering utilizing new technologies for our 100+ page proposal',
     imageUrl: 'nasapng.png', // Replace with your image URL
   },
   {
     companyName: 'Internal Vice President',
     date: 'Sep 2022 - Present',
     location: 'Executive Board | Chicago, IL',
-    description: '-Cultivated the Hispanic community at IIT with over 160 paid members, and 60+ event attendance<br />-Manage all internal affairs with dean of engineering and computing through adminstration<br />-Served also as recruitment chair hosting weeklong social events that lead to a 50+ recruitment count',
+    description: '• Cultivated the Hispanic community at IIT with over 160 paid members, and 60+ event attendance<br />• Manage all internal affairs with dean of engineering and computing through adminstration<br />• Served also as recruitment chair hosting weeklong social events that lead to a 50+ recruitment count',
     imageUrl: 'shpe.png', // Replace with your image URL
   },
   // Add more experiences as needed
@@ -42,7 +42,7 @@ const Experience = () => {
       <motion.h1 className="text-5xl font-bold text-center mb-32 text-black ">Experience</motion.h1>
       <div 
       style={{ borderRadius: '50px' }}
-      className="flex flex-wrap justify-center  w-9/12 mx-auto  overflow-hidden">
+      className="flex flex-wrap justify-center  sm:w-5/6 w-11/12 mx-auto  overflow-hidden">
         {experiences.map((experience, index) => (
           <div
             key={index}
@@ -61,7 +61,7 @@ const Experience = () => {
               <p className="text-base text-gray-600 mb-1">{experience.date}</p>
                 <h2 className="text-2xl font-semibold mb-1">{experience.companyName}</h2>               
                  <p className="text-base text-gray-600 mb-2">{experience.location}</p>
-                <p className="text-gray-700 text-base mb-0 mr-10" dangerouslySetInnerHTML = {{__html:experience.description}}></p>
+                <p className="text-gray-700 text-sm mb-0 mr-10" dangerouslySetInnerHTML = {{__html:experience.description}}></p>
                 {/* Additional content */}
               </div>
             </div>

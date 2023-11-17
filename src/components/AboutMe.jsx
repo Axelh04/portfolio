@@ -67,8 +67,8 @@ const links = [
  className='h-16'>
 
       </div>
-      <motion.div 
-      className="relative md:max-w-max sm:w-5/6 w-9/12 backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-16" >
+      <motion.div
+      className="relative md:max-w-max sm:w-5/6 w-11/12 backdrop-blur-xl backdrop-brightness-[.85] mx-auto rounded-3xl overflow-hidden py-16" >
       <div className='h-16'>
       <motion.p 
       initial={{ x: 0, y:100, opacity: 0 }}
@@ -111,11 +111,6 @@ const links = [
               About Me
               </motion.h2> */}
             <motion.p 
-             ref={ref}
-             initial="hidden"
-             animate={controls}
-             exit="hidden" // Use the same exit variant as initial
-             variants={fadeInVariants}
              className=" overflow-hidden  md:text-4xl text-2xl font-normal leading-7 text-white text-center py-8">
               I'm a <b>software engineer</b> born in Mexico, raised in Illinois, and currently a <b>sophomore</b> at the Illinois Institute of Technology. <b>From NASA to the Chicago tech scene</b>, I'm driven to make an impact through code. Join me on my journey to shape the future through software.
             </motion.p>

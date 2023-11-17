@@ -65,7 +65,7 @@ const Projects = () => {
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-9/12 mr-20 snap-center snap-always mb-32 "
+          className="inline-block w-9/12 sm:mr-20 mr-8 snap-center snap-always mb-32 "
             >
 
 
@@ -76,7 +76,7 @@ const Projects = () => {
 
 
           <div className=" bg-gray-100 w-full rounded-3xl h-20 py-5 mb-4 shadow-inner whitespace-normal  ">    
-          <h3 className=" text-3xl font-bold  mx-auto text-gray-600" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
+          <h3 className=" sm:text-3xl text-2xl font-bold  mx-auto text-gray-600" dangerouslySetInnerHTML = {{__html:project.title}}></h3>
           </div>
         
       

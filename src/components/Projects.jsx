@@ -58,14 +58,14 @@ const Projects = () => {
 
     <motion.h1  className="text-5xl font-bold text-color text-center mt-0 mb-32 ">Portfolio</motion.h1>
 
-    <div className="overflow-x-scroll snap-x snap-mandatory border p-0 whitespace-nowrap">
+    <div className="overflow-x-scroll snap-x snap-mandatory  p-0 whitespace-nowrap">
 
     <div className="inline-block w-9/12"></div>
     
       {projectsData.map((project, index) => (
         <motion.div
           key={index}
-          className="inline-block w-9/12 border top-0 md:mr-20 mr-8 snap-center snap-always mb-32 "
+          className="inline-block w-9/12  top-0 md:mr-20 mr-8 snap-center snap-always mb-32 "
             >
 
 

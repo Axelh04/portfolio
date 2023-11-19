@@ -83,13 +83,13 @@ const Navbarstatic = () => {
       whileHover={{width: 120, x:50, height: 190}}
       transition={{ duration: .3 }}
 
-      className= 'fixed w-auto mx-auto  overflow-hidden rounded-3xl bg-gray-100 shadow-xl sm:invisible'
+      className= 'fixed w-auto mx-auto  overflow-hidden rounded-2xl bg-gray-100 shadow-xl sm:invisible'
       >
         <motion.ul 
-        className='font-base w-[450px] cursor-pointer overflow-hidden justify-between text-left py-2'>
-          <li className='block ml-2 rounded-xl hover:text-black '>
-            <p to = "home" className='text-3xl'  smooth="true" duration={1000}>
-              🟰
+        className='font-base w-[450px] cursor-pointer overflow-hidden justify-between text-left py-0'>
+          <li className='block ml-3 rounded-xl hover:text-black '>
+            <p to = "home" className='text-5xl'  smooth="true" duration={1000}>
+              ➮
             </p>
           </li>
           <li className='block text-gray-600 ml-3 rounded-xl hover:text-black '>
@@ -112,7 +112,7 @@ const Navbarstatic = () => {
               Portfolio
             </Link>
           </li>
-          <li className='block text-gray-600 ml-3 rounded-xl hover:text-black'>
+          <li className='block text-gray-600 ml-3 mb-4 rounded-xl hover:text-black'>
             <Link to="contact" className=' text-xl' smooth="true" duration={1000}>
               Contact
             </Link>

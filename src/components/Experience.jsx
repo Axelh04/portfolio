@@ -2,13 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const experiences = [
-  // {
-  //   companyName: 'Software and Engineering Mentor',
-  //   date: 'Sep 2023 - Present',
-  //   location: 'Mentor | Chicago, IL',
-  //   description: '• Elevated the engineering lab, as a leader of its mentor program through a software engineering focus<br />• Mastery in laser cutting, and 3D printing software for Human Computer Interaction (HCI) development<br />• Mentored groups of at least 20 students weekly in electrical, software, and computer engineering.',
-  //   imageUrl: 'klpng.png', // Replace with your image URL
-  // },
+  {
+    companyName: 'Software Engineer',
+    date: 'Jun 2024 - Aug 2024',
+    location: 'Internship | Menlo Park, CA',
+    description: '• Acquired hands-on expertise in full-stack development by creating and implementing Instagram services<br />• Develop applications for Meta platforms by learning Mixed Reality AR/VR software development<br />• Presented a real-time voice-to-instrument conversion app using machine learning (ML) to Meta Engineers',
+    imageUrl: 'smallmetalogo.png', // Replace with your image URL
+  },
+  {
+    companyName: 'Software and Engineering Mentor',
+    date: 'Sep 2023 - Present',
+    location: 'Mentor | Chicago, IL',
+    description: '• Elevated the engineering lab, as a leader of its mentor program through a software engineering focus<br />• Mastery in laser cutting, and 3D printing software for Human Computer Interaction (HCI) development<br />• Mentored groups of at least 20 students weekly in electrical, software, and computer engineering.',
+    imageUrl: 'klpng.png', // Replace with your image URL
+  },
   {
     companyName: 'Fab-lab Software Developer',
     date: 'May 2023 - Aug-2023',
@@ -25,7 +32,7 @@ const experiences = [
   },
   {
     companyName: 'Internal Vice President',
-    date: 'Sep 2022 - Present',
+    date: 'Sep 2022 - July 2024',
     location: 'Executive Board | Chicago, IL',
     description: '• Cultivated the Hispanic community at IIT with over 160 paid members, and 60+ event attendance<br />• Manage all internal affairs with dean of engineering and computing through adminstration<br />• Served also as recruitment chair hosting weeklong social events that lead to a 50+ recruitment count',
     imageUrl: 'shpe.png', // Replace with your image URL

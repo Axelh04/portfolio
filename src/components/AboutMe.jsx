@@ -3,10 +3,9 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const links = [
-    { name: 'Resume', href: 'https://drive.google.com/file/d/10Zj0_9Owpxv3NSGEa5NI3GQVkbycwcV-/view?usp=sharing' },
+    { name: 'Resume', href: 'https://drive.google.com/file/d/1436oidLHzrxtD-jTrdOEpxoBfHw2mnIe/view?usp=sharing' },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/axel-hernandez2026' },
     { name: 'Github', href: 'https://github.com/Axelh04' },
-    { name: 'Medium', href: 'https://medium.com/@axelwork2004' },
   ] 
   const stats = [
     { name: 'Java', value: 'Languages' },
@@ -74,7 +73,7 @@ const links = [
       initial={{ x: 0, y:100, opacity: 0 }}
       animate={{ x: 0, y:-25, opacity: 1 }}
       transition={{ duration: 2.1 }}
-      className=" relative grid md:grid-cols-4 grid-cols-2 w-5/6 lg:gap-24 gap-4 mx-auto z-0">
+      className=" relative grid grid-cols-3 w-5/6 lg:gap-24 gap-4 mx-auto z-0">
               {links.map((link) => (
                 <motion.a key={link.name} href={link.href} target="_blank"
                 whileHover={{ y:-10}}
@@ -117,7 +116,7 @@ const links = [
           </div>
 
           <div className=" rounded-3xl mt-8 md:w-5/6 w-full mx-auto ">
-            <dl className="  grid lg:gap-x-44 sm:gap-x-10 gap-x-5 gap-y-px grid-cols-4 grid-cols-4 grid-row-1">
+            <dl className="  grid lg:gap-x-44 sm:gap-x-10 gap-x-5 gap-y-px grid-cols- grid-cols-4 grid-row-1">
               {stats.map((stat,index) => (
                 <div key={index} className="flex flex-col-reverse sm:text-left text-center">
                   <dt className="md:text-base text-sm md:leading-7 leading-1 text-white">{stat.name}{stat.name2}{stat.name3}{stat.name4}{stat.name5}</dt>
